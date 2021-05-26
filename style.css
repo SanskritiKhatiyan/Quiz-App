@@ -52,7 +52,7 @@ body {
 
 .info_box .info-list .info span{
     font-weight: 600;
-    color:black;
+    color:rgb(211, 226, 0);
 }
 .info_box .buttons{
     height: 8rem;
