@@ -87,6 +87,13 @@ body {
 	border-radius: 10px;
 }
 
+button:hover{
+    transform: scale(1.5);
+}
+.info_box .buttons #zoom{
+    margin-right: 25px;
+}
+
 
 @keyframes gradient {
 	0% {
