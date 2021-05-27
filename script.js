@@ -6,10 +6,19 @@ quit_btn.onclick=()=>{
     window.history.go(-1);
 }
 
-continue_btn.onclick=()=>{
-   document.body.style.backgroundImage = "url('download.jpg')";
-   body.style.removeProperty('animation');
-}
+// continue_btn.addEventListener('click',()=>{
+    
+//    document.body.style.backgroundImage = "url('download.jpg')";
+//     body.classList.remove('animation')
+   
+// })
+
+const button = document.querySelector('button.restart')
+const body = document.querySelector('body')
+button.addEventListener('click',()=>{
+    body.classList.remove('abc')
+    body.classList.add('bg')
+})
 
 
 
