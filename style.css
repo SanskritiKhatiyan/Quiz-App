@@ -27,9 +27,12 @@
 	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 	backdrop-filter: blur(25px);
 	border-radius: 10px;
-            
-       
   }
+
+  .info_box.activeInfo{
+    opacity: 0;
+}
+
   .info_box .info-title{
     height: 6rem;
     width: 92.5%;
@@ -113,6 +116,24 @@ button:hover{
 
 
 /* Quiz Box */
+
+.quiz_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     opacity: 0;
+     pointer-events: none;
+}
+
+.quiz_box.activeQuiz{
+opacity: 1;
+z-index: 5;
+pointer-events: auto;
+transform: translate(-50%, -50%) scale(1);
+}
 
 
 
