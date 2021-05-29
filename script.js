@@ -42,9 +42,9 @@ function showquestions(index){
     que_text.innerHTML=que_template;
     option_list.innerHTML=option_template;
 
-    const option= option_list.querySelector(".option");
+    const option= option_list.querySelectorAll(".option");
    
-    for(i=0;i<option.length;i++){
+    for(i=0 ; i<option.length ; i++){
       option[i].setAttribute("onclick","option_selected(this)");
     }
   
@@ -55,15 +55,23 @@ function option_selected(choosed_answer){
   clearInterval("timer");
   let users_answser=choosed_answer.textContent;
   let correct_answer=questions[question_number].answer;
-  const allOptions = option_list.children.length;
+  let allOptions = option_list.children.length;
 
-  if(correct_answer==users_answser){
-    console.log("working");
+  if(users_answser == correct_answer){
     userScore += 1;
-    option.classList.add("correct");
+    console.log("Answer is correct");
+  }
+  else{
+    choosed_answer.classList.add("incorrect")
+      console.log("Answer is wrong")
   }
 
+    
+    
+  
+
   next_btn.classList.add(".show");
+ 
 }
 
 

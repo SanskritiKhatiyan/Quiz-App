@@ -159,17 +159,17 @@ transform: translate(-50%, -50%) scale(1);
         background: #fff;
     }
     
-    section .que_text{
+     .que_text{
         font-size: 25px;
         font-weight: 600;
     }
     
-    section .option_list{
+    .option_list{
         padding: 20px 0px;
         display: block;   
     }
     
-    section .option_list .option{
+    .option_list .option{
         background: aliceblue;
         border: 1px solid #84c5fe;
         border-radius: 5px;
@@ -184,33 +184,33 @@ transform: translate(-50%, -50%) scale(1);
         pointer-events: auto;
     }
     
-    section .option_list .option:last-child{
+    .option_list .option:last-child{
         margin-bottom: 0px;
     }
     
-    section .option_list .option:hover{
+    .option_list .option:hover{
         color: #004085;
         background: #cce5ff;
         border: 1px solid #b8daff;
     }
     
-    section .option_list .option.correct{
-        color: #155724;
-        background: #d4edda;
+    .option_list .option.correct{
+        color: white;
+        background: blue;
         border: 1px solid #c3e6cb;
     }
     
-    section .option_list .option.incorrect{
-        color: #721c24;
-        background: #f8d7da;
+    .option_list .option.incorrect{
+        color: black;
+        background: red;
         border: 1px solid #f5c6cb;
     }
     
-    section .option_list .option.disabled{
+    .option_list .option.disabled{
         pointer-events: none;
     }
     
-    section .option_list .option .icon{
+    .option_list .option .icon{
         height: 26px;
         width: 26px;
         border: 2px solid transparent;
