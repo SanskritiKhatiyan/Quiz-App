@@ -256,7 +256,7 @@ transform: translate(-50%, -50%) scale(1);
         padding-left: 0px;
     }
     
-    footer button{
+    .next_btn{
         height: 40px;
         padding: 0 13px;
         font-size: 18px;
@@ -279,10 +279,10 @@ transform: translate(-50%, -50%) scale(1);
         background: #0263ca;
     }
     
-    footer button.show{
+    .next_btn.show{
         opacity: 1;
         pointer-events: auto;
-        transform: scale(1);
+        /* transform: scale(1); */
     }
 
  

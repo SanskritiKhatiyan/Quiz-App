@@ -7,6 +7,11 @@ const next_btn= document.querySelector("footer .next_btn");
 const time_left_txt=document.querySelector(".timer .time_left_txt");
 const timer_sec=document.querySelector(".timer .timer_sec");
 const time_line=document.querySelector(".time_line");
+const option_list=document.querySelector(".option_list");
+const que_text= document.querySelector(".que_text");
+const score_text=document.querySelector(".score_text");
+const restart=document.querySelector(".resultbuttons .result_box");
+const quit=document.querySelector(".resultbuttons .quit");
 
 
 let question_number=0;
@@ -21,6 +26,9 @@ quit_btn.onclick=()=>{
     window.history.go(-1);
 }
 
+quit.onclick=()=>{
+  window.history.go(-1);
+}
 continue_btn.onclick=()=>{
     body.classList.remove('abc');
     body.classList.add('bg');
@@ -35,12 +43,13 @@ continue_btn.onclick=()=>{
 
 function showquestions(index){
     const que_text= document.querySelector(".que_text");
-    const option_list=document.querySelector(".option_list");
     let que_template= '<span>'+ questions[index].number+ "." + questions[index].question + '</span>';
     let option_template= '<div class="option">'+ questions[index].options[0]+'</div>'+ '<div class="option">'+ questions[index].options[1] +'</div>'+
     '<div class="option">'+  questions[index].options[2]+'</div>'+'<div class="option">'+  questions[index].options[3]+'</div>';
     que_text.innerHTML=que_template;
     option_list.innerHTML=option_template;
+
+    next_btn.classList.remove("show");
 
     const option= option_list.querySelectorAll(".option");
    
@@ -51,27 +60,36 @@ function showquestions(index){
 } 
 
 function option_selected(choosed_answer){
-  clearInterval("liner");
-  clearInterval("timer");
+
+  clearInterval(liner);
+  clearInterval(timer);
   let users_answser=choosed_answer.textContent;
   let correct_answer=questions[question_number].answer;
-  let allOptions = option_list.children.length;
 
   if(users_answser == correct_answer){
-    userScore += 1;
-    console.log("Answer is correct");
+    userScore+=1;
+    choosed_answer.classList.add("correct");
   }
   else{
-    choosed_answer.classList.add("incorrect")
-      console.log("Answer is wrong")
+    choosed_answer.classList.add("incorrect");
+
+      for(i=0;i<option_list.children.length;i++){
+        let auto_answer=option_list.children[i].textContent;
+        if(auto_answer==correct_answer){
+          option_list.children[i].classList.add("correct");
+        }
+      }
   }
 
-    
-    
-  
-
-  next_btn.classList.add(".show");
- 
+  for(i=0;i<option_list.children.length;i++){
+      option_list.children[i].classList.add("disabled");
+  }
+   if(question_count<10){
+   next_btn.classList.add("show");
+   }
+   else {
+     showresult(userScore);
+   }
 }
 
 
@@ -114,10 +132,40 @@ next_btn.onclick=()=>{
     start_timerline(0);
   }
   else{
-
+      showresult(userScore);
     }
 }
 
+function showresult(index){
+  clearInterval(timer);
+  clearInterval(liner);
+  quiz_box.classList.remove('activeQuiz');
+  let total_score= '<div>'+ "your score is"+ index;
+  score_text.innerHTML=total_score;
+
+}
+
+// restart.onclick=()=>{
+//   console.log("working");
+//     quiz_box.classList.add('activeQuiz');
+//     showquestions(question_number);
+//     question_counter(question_count);
+//     start_time(15);
+//     start_timerline(0);
+// }
+restart.onclick=()=>{
+  // body.classList.remove('abc');
+  // body.classList.add('bg');
+  quiz_box.classList.add('activeQuiz');
+  // info_box.classList.add('activeInfo');
+  question_count=1;
+  question_number=0
+  showquestions(question_number);
+  question_counter(question_count);
+  start_time(15);
+  start_timerline(0);
+
+}
 
 
 
