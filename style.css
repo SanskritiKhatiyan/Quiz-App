@@ -181,6 +181,7 @@ transform: translate(-50%, -50%) scale(1);
         display: flex;
         align-items: center;
         justify-content: space-between;
+        pointer-events: auto;
     }
     
     section .option_list .option:last-child{
@@ -268,7 +269,7 @@ transform: translate(-50%, -50%) scale(1);
         background: #007bff;
         border: 1px solid #007bff;
         line-height: 10px;
-        /* opacity: 0; */
+        opacity: 0;
         pointer-events: auto;
         transform: scale(0.95);
         transition: all 0.3s ease;
@@ -284,7 +285,7 @@ transform: translate(-50%, -50%) scale(1);
         transform: scale(1);
     }
 
-    
+ 
 .quiz_box header .timer{
     color: #004085;
     background: #cce5ff;
@@ -296,7 +297,7 @@ transform: translate(-50%, -50%) scale(1);
     align-items: center;
     justify-content: space-between;
     width: 145px;
-}
+} 
 
 .quiz_box header .timer .time_left_txt{
     font-weight: 400;
@@ -323,5 +324,5 @@ transform: translate(-50%, -50%) scale(1);
     bottom: 0px;
     left: 0px;
     height: 3px;
-    background: #007bff;
+    background: black;
 }
