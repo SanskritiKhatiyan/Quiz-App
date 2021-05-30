@@ -10,8 +10,10 @@ const time_line=document.querySelector(".time_line");
 const option_list=document.querySelector(".option_list");
 const que_text= document.querySelector(".que_text");
 const score_text=document.querySelector(".score_text");
+const result_box= document.querySelector(".result_box");
 const restart=document.querySelector(".resultbuttons .restart");
 const quit=document.querySelector(".resultbuttons .quit");
+const result_btn=document.querySelector(".result_btn");
 
 
 let question_number=0;
@@ -105,7 +107,7 @@ function start_time(index){
     function time(){
         timer_sec.innerHTML=index;
         index--;
-        if(index<0){
+            if(index<0){
             clearInterval(timer);
             let correct_answer=questions[question_number].answer;
             for(i=0;i<option_list.children.length;i++){
@@ -120,11 +122,13 @@ function start_time(index){
              if(question_count<10){
              next_btn.classList.add("show");
              }
+            }
              else {
-               showresult(userScore);
+               if(question_count==10 && index==0){
+               result_btn.classList.add("result_show");
+               }
              }
           }
-        }
     }
 
 
@@ -156,13 +160,16 @@ next_btn.onclick=()=>{
 function showresult(index){
   clearInterval(timer);
   clearInterval(liner);
-  quiz_box.classList.remove('activeQuiz');
+  quiz_box.classList.remove("activeQuiz");
+  result_box.classList.add("activeResult");
   let total_score= '<div>'+ "your score is"+ index;
   score_text.innerHTML=total_score;
+  result_btn.classList.remove("result_show");
 
 }
 
 restart.onclick=()=>{
+  quiz_box.classList.add("activeQuiz");
   clearInterval(liner);
   clearInterval(timer);
   start_time(15);
@@ -171,5 +178,10 @@ restart.onclick=()=>{
   question_number=0;
   showquestions(question_number);
   question_counter(question_count);
+  result_box.classList.remove("activeResult");
+  result_btn.classList.remove("result_show");
+}
 
+result_btn.onclick=()=>{
+  showresult(userScore);
 }

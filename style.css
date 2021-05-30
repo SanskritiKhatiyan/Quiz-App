@@ -8,6 +8,7 @@
 .bg{
     background: url('download.jpg');
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .info_box
@@ -364,3 +365,95 @@ transform: translate(-50%, -50%) scale(1);
     height: 3px;
     background: black;
 }
+
+
+.result_box.activeResult{
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    margin: 200px;
+    }
+    .result_box{
+        background: #fff;
+        border-radius: 5px;
+        display: flex;
+        padding: 25px 30px;
+        width: 450px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+    
+    .result_box .icon{
+        font-size: 100px;
+        color: #007bff;
+        margin-bottom: 10px;
+    }
+    
+    .result_box .complete_text{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    .result_box .score_text span{
+        display: flex;
+        margin: 10px 0;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    
+    .result_box .score_text span p{
+        padding: 0 4px;
+        font-weight: 600;
+    }
+    
+    .result_box .resultbuttons{
+        display: flex;
+        margin: 20px 0;
+    }
+    
+    .result_box .resultbuttons button{
+        margin: 0 10px;
+        height: 45px;
+        padding: 0 20px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #007bff;
+        transition: all 0.3s ease;
+    }
+    
+    .resultbuttons button.restart{
+        color: #fff;
+        background: #007bff;
+    }
+    
+    .resultbuttons button.restart:hover{
+        background: #0263ca;
+    }
+    
+    .resultbuttons button.quit{
+        color: #007bff;
+        background: #fff;
+    }
+    
+    .resultbuttons button.quit:hover{
+        color: #fff;
+        background: #007bff;
+    }
+
+    .result_btn{
+        opacity: 0;
+    }
+    .result_btn.result_show{
+        opacity: 1;
+        z-index: 6;
+    }
