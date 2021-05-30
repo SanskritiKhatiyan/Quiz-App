@@ -10,7 +10,7 @@ const time_line=document.querySelector(".time_line");
 const option_list=document.querySelector(".option_list");
 const que_text= document.querySelector(".que_text");
 const score_text=document.querySelector(".score_text");
-const restart=document.querySelector(".resultbuttons .result_box");
+const restart=document.querySelector(".resultbuttons .restart");
 const quit=document.querySelector(".resultbuttons .quit");
 
 
@@ -19,6 +19,7 @@ let question_count=1;
 let timer;
 let liner;
 let index;
+let time_close;
 let userScore=0;
 
 
@@ -38,7 +39,6 @@ continue_btn.onclick=()=>{
     question_counter(question_count);
     start_time(15);
     start_timerline(0);
-
 }
 
 function showquestions(index){
@@ -107,9 +107,26 @@ function start_time(index){
         index--;
         if(index<0){
             clearInterval(timer);
+            let correct_answer=questions[question_number].answer;
+            for(i=0;i<option_list.children.length;i++){
+              let auto_answer=option_list.children[i].textContent;
+              if(auto_answer==correct_answer){
+                option_list.children[i].classList.add("correct");
+              }
+            }
+              for(i=0;i<option_list.children.length;i++){
+                option_list.children[i].classList.add("disabled");
+            }
+             if(question_count<10){
+             next_btn.classList.add("show");
+             }
+             else {
+               showresult(userScore);
+             }
+          }
         }
     }
-}
+
 
 function start_timerline(index){
   liner=setInterval(timeline,65);
@@ -145,27 +162,14 @@ function showresult(index){
 
 }
 
-// restart.onclick=()=>{
-//   console.log("working");
-//     quiz_box.classList.add('activeQuiz');
-//     showquestions(question_number);
-//     question_counter(question_count);
-//     start_time(15);
-//     start_timerline(0);
-// }
 restart.onclick=()=>{
-  // body.classList.remove('abc');
-  // body.classList.add('bg');
-  quiz_box.classList.add('activeQuiz');
-  // info_box.classList.add('activeInfo');
-  question_count=1;
-  question_number=0
-  showquestions(question_number);
-  question_counter(question_count);
+  clearInterval(liner);
+  clearInterval(timer);
   start_time(15);
   start_timerline(0);
+  question_count=1;
+  question_number=0;
+  showquestions(question_number);
+  question_counter(question_count);
 
 }
-
-
-
