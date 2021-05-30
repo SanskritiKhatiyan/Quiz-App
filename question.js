@@ -1,6 +1,7 @@
 let questions = [
     {
     number: 1,
+    
     question: "What does xyz means",
     answer: "xyz",
     options: [

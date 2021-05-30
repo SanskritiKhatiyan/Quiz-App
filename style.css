@@ -263,6 +263,35 @@ transform: translate(-50%, -50%) scale(1);
         padding-left: 0px;
     }
     
+    footer button{
+        height: 40px;
+        padding: 0 13px;
+        font-size: 18px;
+        font-weight: 400;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        color: #fff;
+        border-radius: 5px;
+        background: #007bff;
+        border: 1px solid #007bff;
+        line-height: 10px;
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(0.95);
+        transition: all 0.3s ease;
+    }
+    
+    footer button:hover{
+        background: #0263ca;
+    }
+    
+    footer button.show{
+        opacity: 1;
+        pointer-events: auto;
+        transform: scale(1);
+    }
+    
     .next_btn{
         height: 40px;
         padding: 0 13px;
@@ -282,15 +311,10 @@ transform: translate(-50%, -50%) scale(1);
         transition: all 0.3s ease;
     }
     
-    footer button:hover{
-        background: #0263ca;
+    .next_btn:hover{
+        transform: scale(1.2);
     }
     
-    .next_btn.show{
-        opacity: 1;
-        pointer-events: auto;
-        /* transform: scale(1); */
-    }
 
  
 .quiz_box header .timer{
@@ -301,7 +325,7 @@ transform: translate(-50%, -50%) scale(1);
     padding: 0 8px;
     border-radius: 5px;
     position: absolute;
-    right: 0px;
+    right: 10px;
     top:10px;
     align-items: center;
     justify-content: space-between;
