@@ -46,8 +46,8 @@ continue_btn.onclick=()=>{
 function showquestions(index){
     const que_text= document.querySelector(".que_text");
     let que_template= '<span>'+ questions[index].number+ "." + questions[index].question + '</span>';
-    let option_template= '<div class="option">'+ questions[index].options[0]+'</div>'+ '<div class="option">'+ questions[index].options[1] +'</div>'+
-    '<div class="option">'+  questions[index].options[2]+'</div>'+'<div class="option">'+  questions[index].options[3]+'</div>';
+    let option_template= '<div class="option two">'+ questions[index].options[0]+'</div>'+ '<div class="option ">'+ questions[index].options[1] +'</div>'+''+
+    '<div class="option two">'+  questions[index].options[2]+'</div>'+'<div class="option ">'+  questions[index].options[3]+'</div>';
     que_text.innerHTML=que_template;
     option_list.innerHTML=option_template;
 

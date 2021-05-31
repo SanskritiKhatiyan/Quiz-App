@@ -124,7 +124,7 @@ button:hover{
     top: 50%;
     left: 50%;
     width: 45rem; 
-    height: 30rem; 
+    height: 20rem; 
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -169,11 +169,13 @@ transform: translate(-50%, -50%) scale(1);
      .que_text{
         font-size: 25px;
         font-weight: 600;
+        margin-bottom: 30px;
     }
     
     .option_list{
-        padding: 20px 0px;
+        padding: 20px px;
         display: block;  
+        
          
     }
     
@@ -183,18 +185,23 @@ transform: translate(-50%, -50%) scale(1);
         border-radius: 5px;
         padding: 8px 15px;
         font-size: 17px;
-        margin-bottom: 15px;
         cursor: pointer;
         transition: all 0.3s ease;
-        display: flex;
+        margin: 10px;
         align-items: center;
         justify-content: space-between;
         pointer-events: auto;
+        width: 200px;
+        display: inline-flex;
+        justify-content: space-around;
+        margin:10px 48px;
     }
+     
     
-    .option_list .option:last-child{
-        margin-bottom: 0px;
-    }
+
+    /* .option_list .option:last-child{
+        /* margin-bottom: 0px;
+    }  */
     
     .option_list .option:hover{
         color: #004085;
@@ -372,7 +379,10 @@ transform: translate(-50%, -50%) scale(1);
     z-index: 5;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
-    margin: 200px;
+    display: block;
+    margin-left: 50%;
+    margin-top: 25%;
+    
     }
     .result_box{
         background: #fff;
@@ -387,6 +397,8 @@ transform: translate(-50%, -50%) scale(1);
         opacity: 0;
         pointer-events: none;
         transition: all 0.3s ease;
+        
+        
     }
     
     .result_box .icon{
@@ -438,6 +450,7 @@ transform: translate(-50%, -50%) scale(1);
     
     .resultbuttons button.restart:hover{
         background: #0263ca;
+        transform: scale(1.2);
     }
     
     .resultbuttons button.quit{
@@ -448,6 +461,7 @@ transform: translate(-50%, -50%) scale(1);
     .resultbuttons button.quit:hover{
         color: #fff;
         background: #007bff;
+        transform: scale(1.2);
     }
 
     .result_btn{
@@ -457,3 +471,5 @@ transform: translate(-50%, -50%) scale(1);
         opacity: 1;
         z-index: 6;
     }
+
+   
