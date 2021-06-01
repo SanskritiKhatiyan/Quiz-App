@@ -385,11 +385,12 @@ transform: translate(-50%, -50%) scale(1);
     
     }
     .result_box{
-        background: #fff;
+        background: url('back.gif');
         border-radius: 5px;
         display: flex;
         padding: 25px 30px;
-        width: 450px;
+        width: 300px;
+        height: 400px;
         align-items: center;
         flex-direction: column;
         justify-content: center;
@@ -441,6 +442,7 @@ transform: translate(-50%, -50%) scale(1);
         border-radius: 5px;
         border: 1px solid #007bff;
         transition: all 0.3s ease;
+        margin-top: 90%;
     }
     
     .resultbuttons button.restart{
