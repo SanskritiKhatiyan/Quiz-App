@@ -163,7 +163,14 @@ function showresult(index){
   quiz_box.classList.remove("activeQuiz");
   result_box.classList.add("activeResult");
   let total_score= '<div>'+ "your score is"+ index;
-  score_text.innerHTML=total_score;
+  if(index>5){
+    score_text.innerHTML=total_score + '<span>'+"You performed well in the quiz";
+}
+else{
+  score_text.innerHTML=total_score + "Better Luck Next Time";
+}
+
+ 
   result_btn.classList.remove("result_show");
 
 }
@@ -185,3 +192,7 @@ restart.onclick=()=>{
 result_btn.onclick=()=>{
   showresult(userScore);
 }
+
+
+
+    
