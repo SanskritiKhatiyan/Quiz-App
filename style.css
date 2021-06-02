@@ -211,13 +211,13 @@ transform: translate(-50%, -50%) scale(1);
     
     .option_list .option.correct{
         color: white;
-        background: blue;
+        background: rgb(182, 240, 222);
         border: 1px solid #c3e6cb;
     }
     
     .option_list .option.incorrect{
         color: black;
-        background: red;
+        background: rgb(248, 193, 193);
         border: 1px solid #f5c6cb;
     }
     
