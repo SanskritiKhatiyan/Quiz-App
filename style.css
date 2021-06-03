@@ -20,8 +20,8 @@
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 52.25rem; 
-    height: 30rem;  
+    width: 50.25rem; 
+    height: 29rem;  
     background: rgba(255, 255, 255, 0.1);
 	box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
 	border: 1px solid rgba(255, 255, 255, 0.5);
@@ -64,11 +64,11 @@
     color:rgb(211, 226, 0);
 }
 .info_box .buttons{
-    height: 8rem;
+    height: 5rem;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 4rem;
+    padding: 0 2rem;
     border-top: 1px solid lightgrey;
     
 }
@@ -78,7 +78,7 @@
     height: 2rem;
     width: 6.25rem;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
     font-family: 'Open Sans', sans-serif;
     color: whitesmoke;
     cursor: pointer;
@@ -95,10 +95,20 @@
     backdrop-filter: blur(25px);
 	border-radius: 10px;
 }
-
+svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+  }
 button:hover{
-    transform: scale(1.5);
+    transform: scale(1.1);  
 }
+
 .info_box .buttons #zoom{
     margin-right: 25px;
 }
@@ -320,7 +330,7 @@ transform: translate(-50%, -50%) scale(1);
     }
     
     .next_btn:hover{
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
     
 
@@ -452,7 +462,7 @@ transform: translate(-50%, -50%) scale(1);
     
     .resultbuttons button.restart:hover{
         background: #0263ca;
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
     
     .resultbuttons button.quit{
@@ -463,7 +473,7 @@ transform: translate(-50%, -50%) scale(1);
     .resultbuttons button.quit:hover{
         color: #fff;
         background: #007bff;
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 
     .result_btn{
