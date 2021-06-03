@@ -19,7 +19,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
-                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                0 6px 20px 0 rgba(133, 131, 131, 0.19);
     width: 50.25rem; 
     height: 29rem;  
     background: rgba(255, 255, 255, 0.1);
@@ -27,7 +27,7 @@
 	border: 1px solid rgba(255, 255, 255, 0.5);
 	border-right: 1px solid rgba(255, 255, 255, 0.2);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-	backdrop-filter: blur(25px);
+	/* backdrop-filter: blur(2px); */
 	border-radius: 10px;
   }
 
@@ -55,12 +55,13 @@
 .info_box .info-list .info{
     margin: .8rem 0;
     font-size: 1.3rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 500;
     color: whitesmoke;
 }
 
 .info_box .info-list .info span{
-    font-weight: 600;
+    font-weight: 550;
     color:rgb(211, 226, 0);
 }
 .info_box .buttons{
@@ -95,19 +96,11 @@
     backdrop-filter: blur(25px);
 	border-radius: 10px;
 }
-svg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    fill: none;
-    stroke: #fff;
-    stroke-dasharray: 150 480;
-    stroke-dashoffset: 150;
-    transition: 1s ease-in-out;
-  }
 button:hover{
     transform: scale(1.1);  
 }
+
+
 
 .info_box .buttons #zoom{
     margin-right: 25px;
