@@ -171,7 +171,7 @@ function showresult(index){
     score_text.innerHTML=total_score + '<span>'+"You performed well in the quiz";
 }
 else{
-  score_text.innerHTML=total_score + "Better Luck Next Time";
+  score_text.innerHTML=total_score + '<span>'+ "Better Luck Next Time";
 }
 
  

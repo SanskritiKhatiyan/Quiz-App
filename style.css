@@ -6,7 +6,7 @@
 	animation: gradient 15s ease infinite;
 }
 .bg{
-    background: url('back.gif');
+    background: url('2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -133,6 +133,13 @@ button:hover{
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
      opacity: 0;
      pointer-events: none;
+     background: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	/* backdrop-filter: blur(2px); */
+	border-radius: 10px;
 }
 
 
@@ -258,6 +265,14 @@ transform: translate(-50%, -50%) scale(1);
         align-items: center;
         justify-content: space-between;
         border-top: 1px solid lightgrey;
+        background: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	/* backdrop-filter: blur(2px); */
+	border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     }
     
     footer .total_que span{
@@ -445,7 +460,7 @@ transform: translate(-50%, -50%) scale(1);
         border-radius: 5px;
         border: 1px solid #007bff;
         transition: all 0.3s ease;
-        margin-top: 90%;
+        margin-top: 80%;
     }
     
     .resultbuttons button.restart{
