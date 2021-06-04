@@ -6,7 +6,7 @@
 	animation: gradient 15s ease infinite;
 }
 .bg{
-    background: url('2.jpg');
+    background: url('bgi.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -126,8 +126,8 @@ button:hover{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 45rem; 
-    height: 20rem; 
+    width: 50rem; 
+    height:29rem ; 
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -138,7 +138,7 @@ button:hover{
 	border: 1px solid rgba(255, 255, 255, 0.5);
 	border-right: 1px solid rgba(255, 255, 255, 0.2);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-	/* backdrop-filter: blur(2px); */
+    backdrop-filter: blur(9px);
 	border-radius: 10px;
 }
 
@@ -172,20 +172,21 @@ transform: translate(-50%, -50%) scale(1);
 
     section{
         padding: 25px 30px 20px 30px;
-        background: #fff;
-        margin-top: 100px;
+        margin-top: 50px;
     }
     
      .que_text{
-        font-size: 25px;
+        font-size: 24px;
         font-weight: 600;
+        font-family: 'Comfortaa', cursive;
         margin-bottom: 30px;
+        
     }
     
     .option_list{
         padding: 20px px;
         display: block;  
-        
+        font-family: 'Varela Round', sans-serif;
          
     }
     
@@ -260,7 +261,7 @@ transform: translate(-50%, -50%) scale(1);
     
     footer{
         height: 60px;
-        padding: 0 30px;
+        padding: 0 30px;  
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -270,7 +271,7 @@ transform: translate(-50%, -50%) scale(1);
 	border: 1px solid rgba(255, 255, 255, 0.5);
 	border-right: 1px solid rgba(255, 255, 255, 0.2);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-	/* backdrop-filter: blur(2px); */
+	backdrop-filter: blur(9px);
 	border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     }
@@ -292,8 +293,8 @@ transform: translate(-50%, -50%) scale(1);
     footer button{
         height: 40px;
         padding: 0 13px;
-        font-size: 18px;
-        font-weight: 400;
+        font-size: 15px;
+        font-weight: 300;
         cursor: pointer;
         border: none;
         outline: none;
@@ -323,6 +324,7 @@ transform: translate(-50%, -50%) scale(1);
         padding: 0 13px;
         font-size: 18px;
         font-weight: 400;
+        font-family:'Roboto Slab', serif;
         cursor: pointer;
         border: none;
         outline: none;
@@ -360,7 +362,8 @@ transform: translate(-50%, -50%) scale(1);
 
 .quiz_box header .timer .time_left_txt{
     font-weight: 400;
-    font-size: 17px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
     user-select: none;
     margin-top: 9%;
 }

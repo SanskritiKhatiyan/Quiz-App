@@ -2,7 +2,7 @@ let questions = [
     {
     number: 1,
     
-    question: "What does xyz means",
+    question: " What does xyz means",
     answer: "xyz",
     options: [
       "abc",
@@ -14,7 +14,7 @@ let questions = [
     
   {
     number: 2,
-    question: "What does xyz means",
+    question: " What does xyz means",
     answer: "xyz",
     options: [
       "abc",
@@ -26,7 +26,7 @@ let questions = [
 
   {
     number: 3,
-    question: "What does xyz means",
+    question: " What does xyz means",
     answer: "xyz",
     options: [
       "abc",
