@@ -135,11 +135,11 @@ function start_time(index){
 
 
 function start_timerline(index){
-  liner=setInterval(timeline,22.5);
+  liner=setInterval(timeline,20);
   function timeline(){
     time_line.style.width = index + "px";
     index++;
-    if(index>720){
+    if(index>800){
       clearInterval(liner);
     }
   }
