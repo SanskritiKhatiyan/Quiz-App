@@ -202,10 +202,11 @@ transform: translate(-50%, -50%) scale(1);
         align-items: center;
         justify-content: space-between;
         pointer-events: auto;
-        width: 200px;
+        width: 240px;
+        height: 7vh;
         display: inline-flex;
         justify-content: space-around;
-        margin:10px 48px;
+        margin:10px 49px;
     }
      
     
@@ -221,7 +222,7 @@ transform: translate(-50%, -50%) scale(1);
     }
     
     .option_list .option.correct{
-        color: white;
+        color: black;
         background: rgb(182, 240, 222);
         border: 1px solid #c3e6cb;
     }
@@ -263,17 +264,11 @@ transform: translate(-50%, -50%) scale(1);
         height: 60px;
         padding: 0 30px;  
         display: flex;
+        margin-top:8%;
         align-items: center;
         justify-content: space-between;
         border-top: 1px solid lightgrey;
-        background: rgba(255, 255, 255, 0.1);
-	box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-	border: 1px solid rgba(255, 255, 255, 0.5);
-	border-right: 1px solid rgba(255, 255, 255, 0.2);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-	backdrop-filter: blur(9px);
-	border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+       
     }
     
     footer .total_que span{
