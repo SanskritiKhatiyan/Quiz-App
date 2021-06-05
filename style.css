@@ -138,7 +138,7 @@ button:hover{
 	border: 1px solid rgba(255, 255, 255, 0.5);
 	border-right: 1px solid rgba(255, 255, 255, 0.2);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(9px);
+    backdrop-filter: blur(5px);
 	border-radius: 10px;
 }
 
@@ -274,10 +274,11 @@ transform: translate(-50%, -50%) scale(1);
     footer .total_que span{
         display: flex;
         user-select: none;
+        font-weight: bolder;
+        font-size: large;
     }
     
     footer .total_que span p{
-        font-weight: 500;
         padding: 0 5px;
     }
     
@@ -315,7 +316,7 @@ transform: translate(-50%, -50%) scale(1);
     }
     
     .next_btn{
-        height: 30px;
+        height: 39px;
         padding: 0 8px;
         font-size: 18px;
         font-weight: 400;
