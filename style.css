@@ -286,17 +286,17 @@ transform: translate(-50%, -50%) scale(1);
     }
     
     footer button{
-        height: 40px;
-        padding: 0 13px;
+        height: 35px;
+        padding: 0 8px;
         font-size: 15px;
         font-weight: 300;
         cursor: pointer;
         border: none;
         outline: none;
-        color: #fff;
+        color: black;
         border-radius: 5px;
-        background: #007bff;
-        border: 1px solid #007bff;
+        background: white;
+        border: 1px solid #ff4800e3;
         line-height: 10px;
         opacity: 0;
         pointer-events: none;
@@ -305,7 +305,7 @@ transform: translate(-50%, -50%) scale(1);
     }
     
     footer button:hover{
-        background: #0263ca;
+        background:azure;
     }
     
     footer button.show{
@@ -315,19 +315,19 @@ transform: translate(-50%, -50%) scale(1);
     }
     
     .next_btn{
-        height: 40px;
-        padding: 0 13px;
+        height: 30px;
+        padding: 0 8px;
         font-size: 18px;
         font-weight: 400;
         font-family:'Roboto Slab', serif;
         cursor: pointer;
         border: none;
         outline: none;
-        color: #fff;
-        border-radius: 5px;
-        background: #007bff;
-        border: 1px solid #007bff;
-        line-height: 10px;
+        color: black;
+        border-radius: 6px;
+        background: white;
+        border: 2px solid #ff4800e3;
+        line-height: 3px;
         opacity: 0;
         pointer-events: auto;
         transform: scale(0.95);
