@@ -317,17 +317,13 @@ transform: translate(-50%, -50%) scale(1);
     
     .next_btn{
         height: 39px;
-        padding: 0 8px;
+        background-color: transparent;
         font-size: 18px;
         font-weight: 400;
         font-family:'Roboto Slab', serif;
         cursor: pointer;
         border: none;
-        outline: none;
-        color: black;
-        border-radius: 6px;
-        background: white;
-        border: 2px solid #ff4800e3;
+        outline: none;        
         line-height: 3px;
         opacity: 0;
         pointer-events: auto;
@@ -337,6 +333,7 @@ transform: translate(-50%, -50%) scale(1);
     
     .next_btn:hover{
         transform: scale(1.1);
+        background-color: transparent;
     }
     
 
@@ -402,11 +399,12 @@ transform: translate(-50%, -50%) scale(1);
     
     }
     .result_box{
-        background: url('back.gif');
+        background: url('qz.png');
+        left: 50%;
         border-radius: 5px;
         display: flex;
         padding: 25px 30px;
-        width: 300px;
+        width: 350px;
         height: 400px;
         align-items: center;
         flex-direction: column;
@@ -415,7 +413,7 @@ transform: translate(-50%, -50%) scale(1);
         opacity: 0;
         pointer-events: none;
         transition: all 0.3s ease;
-        
+        background-repeat: no-repeat;
         
     }
     
@@ -448,8 +446,8 @@ transform: translate(-50%, -50%) scale(1);
     }
     
     .result_box .resultbuttons button{
-        margin: 0 10px;
-        height: 45px;
+        margin: 0 15px;
+        height: 35px;
         padding: 0 20px;
         font-size: 18px;
         font-weight: 500;
@@ -460,6 +458,7 @@ transform: translate(-50%, -50%) scale(1);
         border: 1px solid #007bff;
         transition: all 0.3s ease;
         margin-top: 80%;
+        z-index: -9999;
     }
     
     .resultbuttons button.restart{
