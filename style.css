@@ -317,6 +317,7 @@ transform: translate(-50%, -50%) scale(1);
     
     .next_btn{
         height: 39px;
+        
         background-color: transparent;
         font-size: 18px;
         font-weight: 400;
@@ -404,7 +405,7 @@ transform: translate(-50%, -50%) scale(1);
         border-radius: 5px;
         display: flex;
         padding: 25px 30px;
-        width: 350px;
+        width: 500px;
         height: 400px;
         align-items: center;
         flex-direction: column;
@@ -442,11 +443,13 @@ transform: translate(-50%, -50%) scale(1);
     
     .result_box .resultbuttons{
         display: flex;
-        margin: 20px 0;
+        margin-top: 60%;
+        margin-left: 40%;
+        
     }
     
     .result_box .resultbuttons button{
-        margin: 0 15px;
+        
         height: 35px;
         padding: 0 20px;
         font-size: 18px;
@@ -457,8 +460,9 @@ transform: translate(-50%, -50%) scale(1);
         border-radius: 5px;
         border: 1px solid #007bff;
         transition: all 0.3s ease;
-        margin-top: 80%;
-        z-index: -9999;
+        margin-left: 20px;
+       
+        
     }
     
     .resultbuttons button.restart{
