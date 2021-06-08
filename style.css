@@ -1,4 +1,4 @@
-
+@import url("https://fonts.googleapis.com/css?family=Raleway:500");
 
 .abc{
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -413,20 +413,19 @@ transform: translate(-50%, -50%) scale(1);
         transform: translate(-50%, -50%) scale(0.9);
         opacity: 0;
         pointer-events: none;
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
         background-repeat: no-repeat;
         
     }
     
     .result_box .icon{
         font-size: 100px;
-        
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
     
     .result_box .complete_text{
-        font-size: 20px;
-        font-weight: 500;
+        font-family: 'Merienda';font-size: 24px;
+        font-weight: 400;
     }
     
     .result_box .score_text span{
@@ -444,26 +443,24 @@ transform: translate(-50%, -50%) scale(1);
     .result_box .resultbuttons{
         display: flex;
         margin-top: 60%;
-        margin-left: 40%;
-        
     }
     
     .result_box .resultbuttons button{
         
-        height: 35px;
-        padding: 0 20px;
-        font-size: 18px;
+        height: 34px;
+        padding: 0 18px;
         font-weight: 300;
         cursor: pointer;
         border: none;
         outline: none;
-        border-radius: 5px;
+        border-radius: 6px;
         margin-left: 20px;
-       
+        font: 1rem Raleway, sans-serif;
         
     }
     
     .resultbuttons button.restart{
+        margin-left: 10%;
         -webkit-appearance: none;
         background-image: linear-gradient(to right, #00A8C5, #FCEE21, #009245, #D9E021);
         box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
@@ -504,9 +501,10 @@ transform: translate(-50%, -50%) scale(1);
     }
     
     .resultbuttons button.quit{
+        margin-left: 40%;
         -webkit-appearance: none;
-        background-image: linear-gradient(to right, #00A8C5, #FCEE21, #009245, #D9E021);
-        box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+        background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #f02d2d);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
         /* background: -webkit-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%);
         background: linear-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%); */
         background-size: 500%; 
