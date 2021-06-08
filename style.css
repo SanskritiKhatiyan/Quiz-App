@@ -420,7 +420,7 @@ transform: translate(-50%, -50%) scale(1);
     
     .result_box .icon{
         font-size: 100px;
-        color: #007bff;
+        
         margin-bottom: 10px;
     }
     
@@ -453,37 +453,85 @@ transform: translate(-50%, -50%) scale(1);
         height: 35px;
         padding: 0 20px;
         font-size: 18px;
-        font-weight: 500;
+        font-weight: 300;
         cursor: pointer;
         border: none;
         outline: none;
         border-radius: 5px;
-        border: 1px solid #007bff;
-        transition: all 0.3s ease;
         margin-left: 20px;
        
         
     }
     
     .resultbuttons button.restart{
-        color: #fff;
-        background: #007bff;
+        -webkit-appearance: none;
+        background-image: linear-gradient(to right, #00A8C5, #FCEE21, #009245, #D9E021);
+        box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+        /* background: -webkit-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%);
+        background: linear-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%); */
+        background-size: 500%; 
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+	    color: #fff;
+        -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+        -webkit-tap-highlight-color: transparent;
+	   -webkit-user-select: none;
+	    -moz-user-select: none;
+	   -ms-user-select: none;
+	    user-select: none;
+
     }
     
     .resultbuttons button.restart:hover{
-        background: #0263ca;
-        transform: scale(1.1);
+        animation-name: gradient;
+	-webkit-animation-name: gradient;
+	animation-duration: 2s;
+	-webkit-animation-duration: s;
+	animation-iteration-count: 1;
+	-webkit-animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+        
+    }
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+    
+        100% {
+            background-position: 100%;
+        }
     }
     
     .resultbuttons button.quit{
-        color: #007bff;
-        background: #fff;
+        -webkit-appearance: none;
+        background-image: linear-gradient(to right, #00A8C5, #FCEE21, #009245, #D9E021);
+        box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+        /* background: -webkit-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%);
+        background: linear-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%); */
+        background-size: 500%; 
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+	    color: #fff;
+        -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+        -webkit-tap-highlight-color: transparent;
+	   -webkit-user-select: none;
+	    -moz-user-select: none;
+	   -ms-user-select: none;
+	    user-select: none;
+
     }
     
     .resultbuttons button.quit:hover{
-        color: #fff;
-        background: #007bff;
-        transform: scale(1.1);
+        animation-name: gradient;
+        -webkit-animation-name: gradient;
+        animation-duration: 2s;
+        -webkit-animation-duration: s;
+        animation-iteration-count: 1;
+        -webkit-animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+            
     }
 
     .result_btn{
