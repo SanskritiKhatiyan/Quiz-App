@@ -327,7 +327,7 @@ transform: translate(-50%, -50%) scale(1);
         outline: none;        
         line-height: 3px;
         opacity: 0;
-        pointer-events: auto;
+        pointer-events: none;
         transform: scale(0.95);
         transition: all 0.3s ease;
     }
@@ -410,7 +410,7 @@ transform: translate(-50%, -50%) scale(1);
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        transform: translate(-50%, -50%) scale(0.9);
+        transform: translate(-50%, -50%);
         opacity: 0;
         pointer-events: none;
         transition: all 0.5s ease;
@@ -424,20 +424,24 @@ transform: translate(-50%, -50%) scale(1);
     }
     
     .result_box .complete_text{
-        font-family: 'Merienda';font-size: 24px;
-        font-weight: 400;
+        font-family: 'Raleway', sans-serif;
+        font-size: 30px;
+        text-align: center;
     }
     
     .result_box .score_text span{
         display: flex;
-        margin: 10px 0;
-        font-size: 18px;
-        font-weight: 500;
+        margin: 8px 10px 0px 0px;
+        font-size: 8px;
+        font-weight: 400;
+        font-family: 'Rubik', sans-serif;
     }
     
     .result_box .score_text span p{
         padding: 0 4px;
         font-weight: 600;
+        font-family: 'Rubik', sans-serif;
+        font-size: 25px;
     }
     
     .result_box .resultbuttons{

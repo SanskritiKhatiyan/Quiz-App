@@ -166,12 +166,12 @@ function showresult(index){
   clearInterval(liner);
   quiz_box.classList.remove("activeQuiz");
   result_box.classList.add("activeResult");
-  let total_score= '<div>'+ "your score is"+ index;
+  let total_score= '<div>'+ "Your score is "+index+'</div>';
   if(index>5){
-    score_text.innerHTML=total_score + '<span>'+"You performed well in the quiz";
+    score_text.innerHTML=total_score + '<span>'+"You performed well in the quiz"+'</span>';
 }
 else{
-  score_text.innerHTML=total_score + '<span>'+ "Better Luck Next Time";
+  score_text.innerHTML=total_score + '<span>'+ "Better Luck Next Time"+'</span>';
 }
 
  
