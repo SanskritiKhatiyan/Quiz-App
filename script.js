@@ -26,6 +26,190 @@ let userScore=0;
 let tickemoji= '<div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="darkgreen" class="bi bi-check-lg" viewBox="0 0 16 16"><path d="M13.485 1.431a1.473 1.473 0 0 1 2.104 2.062l-7.84 9.801a1.473 1.473 0 0 1-2.12.04L.431 8.138a1.473 1.473 0 0 1 2.084-2.083l4.111 4.112 6.82-8.69a.486.486 0 0 1 .04-.045z"/></svg</div>';
 let wrongemoji= '<div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-x-lg" viewBox="0 0 16 16"><path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/></svg> </div>';
 
+let correct_answer;
+  function showquestions(index){
+
+    axios.get('https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple')
+    .then(res=>{
+      console.log(res);
+      let questions =[
+        {
+        number: 1,
+        question: res.data.results[0].question ,
+        answer: res.data.results[0].correct_answer,
+        options: [
+          res.data.results[0].correct_answer,
+          res.data.results[0].incorrect_answers[0],
+          res.data.results[0].incorrect_answers[1],
+          res.data.results[0].incorrect_answers[2]
+        ]
+      },
+        
+      {
+        number: 2,
+        question: res.data.results[1].question,
+        answer: res.data.results[1].correct_answer,
+        options: [
+          res.data.results[1].incorrect_answers[0],
+          res.data.results[1].correct_answer,
+          res.data.results[1].incorrect_answers[1],
+          res.data.results[1].incorrect_answers[2]
+        ]
+      },
+      
+      {
+        number: 3,
+        question: res.data.results[2].question,
+        answer: res.data.results[2].correct_answer,
+        options: [
+          res.data.results[2].incorrect_answers[0],
+          res.data.results[2].correct_answer,
+          res.data.results[2].incorrect_answers[1],
+          res.data.results[2].incorrect_answers[2]
+        ]
+      },
+      
+      {
+        number: 4,
+        question: res.data.results[3].question,
+        answer: res.data.results[3].correct_answer,
+        options: [
+          res.data.results[3].incorrect_answers[1],
+          res.data.results[3].incorrect_answers[0],
+          res.data.results[3].incorrect_answers[2],
+          res.data.results[3].correct_answer
+        ]
+      },
+      
+      {
+        number: 5,
+        question: res.data.results[4].question,
+        answer: res.data.results[4].correct_answer,
+        options: [
+          res.data.results[4].correct_answer,
+          res.data.results[4].incorrect_answers[1],
+          res.data.results[4].incorrect_answers[2],
+          res.data.results[4].incorrect_answers[0]
+        ]
+      },
+      
+      {
+        number: 6,
+        question: res.data.results[5].question,
+        answer: res.data.results[5].correct_answer,
+        options: [
+          res.data.results[5].incorrect_answers[2],
+          res.data.results[5].correct_answer,
+          res.data.results[5].incorrect_answers[1],
+          res.data.results[5].incorrect_answers[0]
+        ]
+      },
+      
+      {
+        number: 7,
+        question: res.data.results[6].question,
+        answer: res.data.results[6].correct_answer,
+        options: [
+          res.data.results[6].incorrect_answers[2],
+          res.data.results[6].incorrect_answers[1],
+          res.data.results[6].correct_answer,
+          res.data.results[6].incorrect_answers[0]
+        ]
+      },
+      
+      {
+        number: 8,
+        question: res.data.results[7].question,
+        answer: res.data.results[7].correct_answer,
+        options: [
+          res.data.results[7].incorrect_answers[0],
+          res.data.results[7].incorrect_answers[2],
+          res.data.results[7].correct_answer,
+          res.data.results[7].incorrect_answers[1]
+        ]
+      },
+      
+      {
+        number: 9,
+        question: res.data.results[8].question,
+        answer: res.data.results[8].correct_answer,
+        options: [
+          res.data.results[8].correct_answer,
+          res.data.results[8].incorrect_answers[0],
+          res.data.results[8].incorrect_answers[1],
+          res.data.results[8].incorrect_answers[2]
+        ]
+      },
+      
+      {
+        number: 10,
+        question: res.data.results[9].question,
+        answer: res.data.results[9].correct_answer,
+        options: [
+          res.data.results[9].incorrect_answers[1],
+          res.data.results[9].incorrect_answers[0],
+          res.data.results[9].incorrect_answers[2],
+          res.data.results[9].correct_answer
+        ]
+      }
+      ];
+     correct_answer=questions[question_number].answer;
+      const que_text= document.querySelector(".que_text");
+    let que_template= '<span>'+ questions[index].number+ ". " + questions[index].question + '</span>';
+    let option_template= '<div class="option two">'+ questions[index].options[0]+'</div>'+ '<div class="option ">'+ questions[index].options[1] +'</div>'+''+
+    '<div class="option two">'+  questions[index].options[2]+'</div>'+'<div class="option ">'+  questions[index].options[3]+'</div>';
+    que_text.innerHTML=que_template;
+    option_list.innerHTML=option_template;
+
+    next_btn.classList.remove("show");
+
+    const option= option_list.querySelectorAll(".option");
+   
+    for(i=0 ; i<option.length ; i++){
+      option[i].setAttribute("onclick","option_selected(this)");
+    }
+      // const questiont= res.data.results[index].question;
+      // const options=[ res.data.results[index].incorrect_answers[0], res.data.results[index].incorrect_answers[1], res.data.results[index].incorrect_answers[2], res.data.results[index].correct_answer];
+      // const option1= res.data.results[0].incorrect_answers[0];
+      // const option2= res.data.results[0].incorrect_answers[1];
+      // const option3= res.data.results[0].incorrect_answers[2];
+      // const option4= res.data.results[0].correct_answer;
+      // correct_answer=res.data.results[0].correct_answer;
+      // que_template= '<span>'+ questions[index].number+ ". " + questiont + '</span>';
+      // let option_template= '<div class="option two">'+ options[Math.floor(Math.random() *3)]+'</div>'+ '<div class="option ">'+ options[Math.floor(Math.random() *2)] +'</div>'+''+
+      // '<div class="option two">'+ options[Math.floor(Math.random() *1)]+'</div>'+'<div class="option ">'+  options[Math.floor(Math.random() *0)+1]+'</div>';
+      // que_text.innerHTML=que_template;
+      // option_list.innerHTML=option_template;
+
+      // next_btn.classList.remove("show");
+
+      // const option= option_list.querySelectorAll(".option");
+     
+      // for(i=0 ; i<option.length ; i++){
+      //   option[i].setAttribute("onclick","option_selected(this)");
+      // }
+   })
+   .catch(err=>{
+     console.log("ERROR",err)
+   })
+
+    // const que_text= document.querySelector(".que_text");
+    // let que_template= '<span>'+ questions[index].number+ "." + questions[index].question + '</span>';
+    // let option_template= '<div class="option two">'+ questions[index].options[0]+'</div>'+ '<div class="option ">'+ questions[index].options[1] +'</div>'+''+
+    // '<div class="option two">'+  questions[index].options[2]+'</div>'+'<div class="option ">'+  questions[index].options[3]+'</div>';
+    // que_text.innerHTML=que_template;
+    // option_list.innerHTML=option_template;
+
+    // next_btn.classList.remove("show");
+
+    // const option= option_list.querySelectorAll(".option");
+   
+    // for(i=0 ; i<option.length ; i++){
+    //   option[i].setAttribute("onclick","option_selected(this)");
+    // }
+  
+} 
+
 
 quit_btn.onclick=()=>{
     window.history.go(-1);
@@ -45,30 +229,30 @@ continue_btn.onclick=()=>{
     start_timerline(0);
 }
 
-function showquestions(index){
-    const que_text= document.querySelector(".que_text");
-    let que_template= '<span>'+ questions[index].number+ "." + questions[index].question + '</span>';
-    let option_template= '<div class="option two">'+ questions[index].options[0]+'</div>'+ '<div class="option ">'+ questions[index].options[1] +'</div>'+''+
-    '<div class="option two">'+  questions[index].options[2]+'</div>'+'<div class="option ">'+  questions[index].options[3]+'</div>';
-    que_text.innerHTML=que_template;
-    option_list.innerHTML=option_template;
+// function showquestions(index){
+//     const que_text= document.querySelector(".que_text");
+//     let que_template= '<span>'+ questions[index].number+ "." + questions[index].question + '</span>';
+//     let option_template= '<div class="option two">'+ questions[index].options[0]+'</div>'+ '<div class="option ">'+ questions[index].options[1] +'</div>'+''+
+//     '<div class="option two">'+  questions[index].options[2]+'</div>'+'<div class="option ">'+  questions[index].options[3]+'</div>';
+//     que_text.innerHTML=que_template;
+//     option_list.innerHTML=option_template;
 
-    next_btn.classList.remove("show");
+//     next_btn.classList.remove("show");
 
-    const option= option_list.querySelectorAll(".option");
+//     const option= option_list.querySelectorAll(".option");
    
-    for(i=0 ; i<option.length ; i++){
-      option[i].setAttribute("onclick","option_selected(this)");
-    }
+//     for(i=0 ; i<option.length ; i++){
+//       option[i].setAttribute("onclick","option_selected(this)");
+//     }
   
-} 
+// } 
 
 function option_selected(choosed_answer){
 
   clearInterval(liner);
   clearInterval(timer);
   let users_answser=choosed_answer.textContent;
-  let correct_answer=questions[question_number].answer;
+  // let correct_answer=questions[question_number].answer;
 
   if(users_answser == correct_answer){
     userScore+=1;
@@ -113,7 +297,7 @@ function start_time(index){
         index--;
             if(index<0){
             clearInterval(timer);
-            let correct_answer=questions[question_number].answer;
+            // let correct_answer=questions[question_number].answer;
             for(i=0;i<option_list.children.length;i++){
               let auto_answer=option_list.children[i].textContent;
               if(auto_answer==correct_answer){
@@ -166,12 +350,12 @@ function showresult(index){
   clearInterval(liner);
   quiz_box.classList.remove("activeQuiz");
   result_box.classList.add("activeResult");
-  let total_score= '<div>'+ "Your score is "+index+'</div>';
+  let total_score= '<div>'+ "your score is"+ index;
   if(index>5){
-    score_text.innerHTML=total_score + '<span>'+"You performed well in the quiz"+'</span>';
+    score_text.innerHTML=total_score + '<span>'+"You performed well in the quiz";
 }
 else{
-  score_text.innerHTML=total_score + '<span>'+ "Better Luck Next Time"+'</span>';
+  score_text.innerHTML=total_score + '<span>'+ "Better Luck Next Time";
 }
 
  
@@ -196,6 +380,8 @@ restart.onclick=()=>{
 result_btn.onclick=()=>{
   showresult(userScore);
 }
+
+
 
 
 
