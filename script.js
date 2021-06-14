@@ -321,11 +321,11 @@ function start_time(index){
 
 
 function start_timerline(index){
-  liner=setInterval(timeline,20);
+  liner=setInterval(timeline,108);
   function timeline(){
     time_line.style.width = index + "px";
     index++;
-    if(index>800){
+    if(index>150){
       clearInterval(liner);
     }
   }
@@ -350,12 +350,12 @@ function showresult(index){
   clearInterval(liner);
   quiz_box.classList.remove("activeQuiz");
   result_box.classList.add("activeResult");
-  let total_score= '<div>'+ "your score is"+ index;
+  let total_score= '<div class="score_n">'+ "Your score is "+ index+'</div>';
   if(index>5){
-    score_text.innerHTML=total_score + '<span>'+"You performed well in the quiz";
+    score_text.innerHTML=total_score + '<span>'+'<div class="score_text">'+"You performed well in the quiz"+'<div>'+'</span>';
 }
 else{
-  score_text.innerHTML=total_score + '<span>'+ "Better Luck Next Time";
+  score_text.innerHTML=total_score + '<span>'+ '<div class="score_text">'+"Better Luck Next Time"+'<div>'+'</span>';
 }
 
  
