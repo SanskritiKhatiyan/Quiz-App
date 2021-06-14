@@ -138,7 +138,7 @@ button:hover{
 	border: 1px solid rgba(255, 255, 255, 0.5);
 	border-right: 1px solid rgba(255, 255, 255, 0.2);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
 	border-radius: 10px;
 }
 
@@ -172,22 +172,28 @@ transform: translate(-50%, -50%) scale(1);
 
     section{
         padding: 25px 30px 20px 30px;
-        margin-top: 50px;
+        margin-top: 30px;
     }
     
      .que_text{
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 400;
         font-family: 'Comfortaa', cursive;
         margin-bottom: 30px;
         color: #030303;
+        word-wrap: break-word;
+    }
+     .que_border{
+        width:46rem;
+        height: 100px;
+        border:2px solid transparent;
     }
     
     .option_list{
         padding: 20px px;
         display: block;  
         font-family: 'Varela Round', sans-serif;
-         
+        
     }
     
     .option_list .option{
@@ -207,6 +213,8 @@ transform: translate(-50%, -50%) scale(1);
         display: inline-flex;
         justify-content: space-around;
         margin:10px 49px;
+        word-wrap: break-word;
+        
     }
      
     
@@ -264,11 +272,11 @@ transform: translate(-50%, -50%) scale(1);
         height: 60px;
         padding: 0 30px;  
         display: flex;
-        margin-top:8%;
+        margin-top:2%;
         align-items: center;
         justify-content: space-between;
         border-top: 1px solid lightgrey;
-       
+        
     }
     
     footer .total_que span{
@@ -401,6 +409,7 @@ transform: translate(-50%, -50%) scale(1);
     left: 0px;
     height: 3px;
     background-image: linear-gradient(to right, #338513,#52f313, #f8f406, #fa1403e0);
+    margin-bottom: 11%;
 }
 
 
@@ -448,7 +457,7 @@ transform: translate(-50%, -50%) scale(1);
         display: flex;
         margin-top: 70px;
         margin-left: 38px;
-        font-size: 20px;
+        font-size: 30px;
         font-weight: 700;
         font-family: 'Rubik', sans-serif;
     }
@@ -458,7 +467,7 @@ transform: translate(-50%, -50%) scale(1);
         text-align: center;
         padding: 90px 0px 0px 0px;
         margin-left: 40px;
-        font-size: 26px;
+        font-size: 35px;
         font-family:'Roboto Slab', serif;
     
     }
@@ -555,7 +564,7 @@ transform: translate(-50%, -50%) scale(1);
     }
     .result_btn.result_show{
         opacity: 1;
-        z-index: 6;
+        z-index: 99999;
     }
     @keyframes gradient {
         0% {

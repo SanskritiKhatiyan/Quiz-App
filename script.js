@@ -321,11 +321,11 @@ function start_time(index){
 
 
 function start_timerline(index){
-  liner=setInterval(timeline,108);
+  liner=setInterval(timeline,19);
   function timeline(){
     time_line.style.width = index + "px";
     index++;
-    if(index>150){
+    if(index>798){
       clearInterval(liner);
     }
   }
