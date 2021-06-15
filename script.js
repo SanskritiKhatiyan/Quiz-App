@@ -313,8 +313,10 @@ function start_time(index){
             }
              else {
                if(question_count==10 && index==0){
-               result_btn.classList.add("result_show");
-               }
+              //  result_btn.classList.add("result_show");
+                showresult(userScore);
+            }
+
              }
           }
     }
