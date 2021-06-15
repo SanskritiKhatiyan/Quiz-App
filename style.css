@@ -439,7 +439,7 @@ transform: translate(-50%, -50%) scale(1);
         pointer-events: none;
         transition: all 0.5s ease;
         background-repeat: no-repeat;
-        position: absolute;
+        position: fixed;
     }
     
     .result_box .icon{
