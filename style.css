@@ -214,6 +214,7 @@ transform: translate(-50%, -50%) scale(1);
         justify-content: space-around;
         margin:10px 49px;
         word-wrap: break-word;
+        word-break: break-all;
         
     }
      
@@ -409,7 +410,7 @@ transform: translate(-50%, -50%) scale(1);
     left: 0px;
     height: 3px;
     background-image: linear-gradient(to right, #338513,#52f313, #f8f406, #fa1403e0);
-    margin-bottom: 11%;
+    margin-bottom: 10%;
 }
 
 

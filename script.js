@@ -29,7 +29,7 @@ let wrongemoji= '<div><svg xmlns="http://www.w3.org/2000/svg" width="16" height=
 let correct_answer;
   function showquestions(index){
 
-    axios.get('https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple')
+    axios.get('https://opentdb.com/api.php?amount=10&category=18&difficulty=medium&type=multiple')
     .then(res=>{
       console.log(res);
       let questions =[
@@ -371,6 +371,7 @@ restart.onclick=()=>{
   start_timerline(0);
   question_count=1;
   question_number=0;
+  userScore=0;
   showquestions(question_number);
   question_counter(question_count);
   result_box.classList.remove("activeResult");
