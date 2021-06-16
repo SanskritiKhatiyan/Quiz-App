@@ -6,7 +6,7 @@
 	animation: gradient 15s ease infinite;
 }
 .bg{
-    background: url('../Images/flag.png');
+    background: url('../Images/india1.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -233,14 +233,14 @@ transform: translate(-50%, -50%) scale(1);
     
     .option_list .option.correct{
         color: black;
-        background: rgb(182, 240, 222);
+        background: rgb(141, 236, 206);
         border: 1px solid #c3e6cb;
     }
     
     .option_list .option.incorrect{
         color: black;
-        background: rgb(248, 193, 193);
-        border: 1px solid #f5c6cb;
+        background: rgb(245, 129, 129);
+        border: 1px solid rgb(245, 129, 129);
     }
     
     .option_list .option.disabled{
