@@ -24,8 +24,8 @@ html,body{
 {
    
     
-    margin-top: 300px;
-    margin-left: 50%;
+    margin-top: 50vh;
+    margin-left: 50vw;
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
                 0 6px 20px 0 rgba(133, 131, 131, 0.19);
@@ -49,23 +49,15 @@ html,body{
         width: 19rem;
         height: 45rem;
         background: rgba(255, 255, 255, 0.1);
-	box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-	border: 1px solid rgba(255, 255, 255, 0.5);
-	border-right: 1px solid rgba(255, 255, 255, 0.2);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-	/* backdrop-filter: blur(2px); */
-	border-radius: 10px;
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        /* backdrop-filter: blur(2px); */
+        border-radius: 10px;
     }
-    .info_box .info-title{
-        font-size: 1rem;
-        height: fit-content;
-        width: fit-content;
-        margin-left: -20px;
-    }
-    .info_box .info-list{
-        padding: 0.5rem 1rem;
-        margin: 0rem 0;
-    }
+    
 }
 
   .info_box.activeInfo{
@@ -175,9 +167,9 @@ button:hover{
 /* Quiz Box */
 
 .quiz_box{
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    
+    margin-top: -75vh;
+    margin-left: 50vw;
     width: 50rem; 
     height:29rem ; 
     transform: translate(-50%, -50%);
@@ -194,7 +186,27 @@ button:hover{
 	border-radius: 10px;
 }
 
-
+@media only screen and (max-width: 600px) {
+    .quiz_box{
+    margin-top: -90vh;
+    margin-left: 50vw;
+    width: 19rem; 
+    height:40rem ; 
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.9);
+     opacity: 0;
+     pointer-events: none;
+    }
+    .que_text{
+        margin-left: -5vw;
+    }
+    .option_list{
+        margin-left: -17vw;
+        margin-top: -5vh;
+    }
+   
+}
 
 .quiz_box.activeQuiz{
 opacity: 1;
@@ -462,7 +474,7 @@ transform: translate(-50%, -50%) scale(1);
     left: 0px;
     height: 3px;
     background-image: linear-gradient(to right, #338513,#52f313, #f8f406, #fa1403e0);
-    margin-bottom: 10%;
+    margin-bottom: 9%;
 }
 
 
