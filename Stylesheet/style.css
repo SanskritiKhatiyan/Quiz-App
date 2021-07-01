@@ -503,7 +503,14 @@ transform: translate(-50%, -50%) scale(1);
         pointer-events: none;
         transition: all 0.5s ease;
         background-repeat: no-repeat;
-        position: fixed;
+        position: absolute;
+        top:0% ;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .result_box{
+
+        }
     }
     
     .result_box .icon{
@@ -521,12 +528,20 @@ transform: translate(-50%, -50%) scale(1);
     
     .result_box .score_text span{
         display: flex;
-        margin-top: 180px;
-        margin-left: 140px;
+        margin-top: 190px;
+        margin-left: 160px;
         font-size: 22px;
         /* font-weight: 200; */
         font-family: 'Raleway', sans-serif;
     }
+    .result_box .score_text .score-abc{
+        font-family: 'Raleway', sans-serif;
+        margin-top: 8vh;
+        margin-left: 15vw;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
 
     .result_box .score_n {
         display: flex;
