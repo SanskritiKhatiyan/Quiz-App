@@ -509,7 +509,37 @@ transform: translate(-50%, -50%) scale(1);
 
     @media only screen and (max-width: 600px) {
         .result_box{
-
+            background: url('../Images/test.png');
+        /* left: 10%; */
+        border-radius:10px;
+        display: flex;
+        width: 19rem;
+        height: 40rem;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.5s ease;
+        background-repeat: no-repeat;
+        position: absolute;
+        top:30% ;
+        }
+        .result_box .complete_text{
+            margin-top: 10vh;
+            margin-left: 7vw;
+        }
+        .result_box .score_text span{
+           margin-left: -40%;
+        }
+        .result_box .resultbuttons{
+            margin-left: -40px;
+            margin-right: 10px;
+           
+        }
+        .result_box .resultbuttons button{
+            margin-top: 50px;
         }
     }
     
@@ -529,7 +559,7 @@ transform: translate(-50%, -50%) scale(1);
     .result_box .score_text span{
         display: flex;
         margin-top: 190px;
-        margin-left: 160px;
+        margin-left: 14vw;
         font-size: 22px;
         /* font-weight: 200; */
         font-family: 'Raleway', sans-serif;
