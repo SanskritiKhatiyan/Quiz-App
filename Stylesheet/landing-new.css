@@ -1,0 +1,167 @@
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+@import url(https://allfont.net/allfont.css?fonts=edo);
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+body {
+  margin: 0px;
+}
+
+.nav {
+  height: 4.7rem;
+  width: 100%;
+  background-color:transparent;
+  position: fixed;
+  font-family: "Quicksand", sans-serif;
+  z-index: 33;
+}
+nav.active{
+  position: fixed;
+  z-index: 9000000;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 4.7rem;
+background-color:black;
+transition: background-color 0.5s 
+}
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 2.0rem;
+  color:whitesmoke;
+  padding: 20px 10px 0px 30px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 1.4rem;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 23px 20px 0px 7px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  color: aquamarine;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 14px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 14px;
+  }
+  
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 8px;
+    border-top: 3px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 70px;
+    font-size: 1.6rem;
+    
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) + .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked + .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+/* Nav Bar Ends */
+
+
+.landing-pg {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://images.unsplash.com/photo-1446329360995-b4642a139973?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1940&q=80);
+  
+}
+.pos{
+  width:350px;
+  margin-left:52rem;
+  padding-top: 8rem;
+}
+.head-txt{
+  border: 2px solid transparent;
+  position: absolute;
+   top:10rem;
+   left: 5rem;
+   width:700px;
+   height:60px;
+   font-family: 'Edo', arial;
+   font-size: 2.6rem;
+}
+.low-txt{
+  border: 2px solid transparent;
+  position: absolute;
+  top:17rem;
+  left: 3rem;
+  width:700px;
+  height:280px;
+}
+.low-txt h1{
+  font-family: 'Rubik', sans-serif;
+   font-size: 1.8rem;
+  
+}
+.low-txt h2{
+  font-size: 25px;
+  font-family: 'Expletus Sans', cursive;
+  margin-left: 150px;
+}
+.low-txt h3{
+  margin-left: 200px;
+  font-size: 25px;
+  font-family: 'Expletus Sans', cursive;
+}
+.low-txt  h4{
+  margin-left: 300px;
+  font-size: 25px;
+  font-family: 'Expletus Sans', cursive;
+}
+
+.Ds-img{
+  width:350px;
+  margin-left:52rem;
+  
+}
