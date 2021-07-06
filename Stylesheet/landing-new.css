@@ -181,7 +181,7 @@ transition: background-color 0.5s
 }
 .DS-txt{
   border: 2px solid red;
-  position: absolute;
+  position: relative;
    top:5rem;
    left: 18rem;
    width:700px;
