@@ -169,8 +169,24 @@ transition: background-color 0.5s
 
 }
 
+
+.landing3-pg {
+  width: 100%;
+  height: 60%;
+  background-image: url(../Images/asq.jpg);
+}
 .Ds-img{
-  width:350px;
-  margin-left:52rem;
-  
+  width:370px;
+  margin-left: 2rem;
+}
+.DS-txt{
+  border: 2px solid red;
+  position: absolute;
+   top:5rem;
+   left: 18rem;
+   width:700px;
+   height:60px;
+   font-family: 'Edo', arial;
+   font-size: 2.6rem;
+   color: azure;
 }
