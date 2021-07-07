@@ -7,7 +7,7 @@ const bcrypt= require("bcrypt");
 
 
 // ===================CONNECTING DATABASE========================
-mongoose.connect('mongodb://localhost:27017/User_Database', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost:27017/userdb', { useNewUrlParser: true, useUnifiedTopology: true })
 .then(()=>{
     console.log("mongo connection is done:)");
 })
@@ -40,15 +40,14 @@ app.get('/register', (req,res)=>{
 })
 
 app.post('/register', async (req, res)=>{
-    const { password, username}= req.body;
+    const {password,username}= req.body;
     const hash_pw= await bcrypt.hash(password, 12);
-    res.send(hash_pw);
     const user= new User({
-        password: hash_pw,
-        username
-      });
-    await user.save();
-    // res.redirect('/landing')
+        username,
+        password: hash_pw
+      })
+   await user.save();
+    res.redirect('/')
 
 })
 
