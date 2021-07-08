@@ -184,7 +184,7 @@ transition: background-color 0.5s
 .DS-txt{
   border: 2px solid transparent;
   position: absolute;
-   top:42rem;
+   top:38rem;
    left: 38rem;
    width:500px;
    height:60px;
@@ -196,7 +196,7 @@ transition: background-color 0.5s
 .DS-low-txt{
   border: 2px solid transparent;
   position: absolute;
-   top:48rem;
+   top:42rem;
    left: 47rem;
    width:500px;
    height:60px;
@@ -211,7 +211,7 @@ cursor: pointer;
 font-size: 1.2rem;
 font-family: 'Expletus Sans', cursive;
 left:54rem;
-top:14.5rem;
+top:16rem;
 display: flex;
 padding: 0 30px;
 border-radius: 7px;
