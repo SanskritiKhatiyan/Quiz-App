@@ -64,7 +64,8 @@ app.get('/login', (req,res)=>{
 app.post('/login', async (req, res)=>{
     const {username, password} =req.body;
     const user= await User.findOne({username});
-    res.send(user.username);
+    let currentuser= user.username;
+    res.send(currentuser);
     const validpassword = await bcrypt.compare(password, user.password);
     if(validpassword){
     req.session.user_id=user._id;
