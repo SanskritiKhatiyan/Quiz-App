@@ -65,11 +65,12 @@ app.post('/login', async (req, res)=>{
     const {username, password} =req.body;
     const user= await User.findOne({username});
     let currentuser= user.username;
-    res.send(currentuser);
+    // res.send(currentuser);
     const validpassword = await bcrypt.compare(password, user.password);
     if(validpassword){
     req.session.user_id=user._id;
     // res.redirect('/')
+    res.render('logout.ejs', {currentuser: user.username});
     }
     else{
     res.send('AREY YAAR')
