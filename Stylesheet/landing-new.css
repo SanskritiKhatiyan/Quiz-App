@@ -1,0 +1,254 @@
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+@import url(https://allfont.net/allfont.css?fonts=edo);
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+body {
+  margin: 0px;
+}
+
+.nav {
+  height: 4.7rem;
+  width: 100%;
+  background-color:transparent;
+  position: fixed;
+  font-family: "Quicksand", sans-serif;
+  z-index: 33;
+}
+nav.active{
+  position: fixed;
+  z-index: 9000000;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 4.7rem;
+background-color:black;
+transition: background-color 0.5s 
+}
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 2.0rem;
+  color:whitesmoke;
+  padding: 20px 10px 0px 30px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 1.4rem;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 23px 20px 0px 7px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  color: aquamarine;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 14px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 14px;
+  }
+  
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 8px;
+    border-top: 3px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 70px;
+    font-size: 1.6rem;
+    
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) + .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked + .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+/* Nav Bar Ends */
+
+
+.landing-pg {
+  width: 100%;
+  height: 100%;
+  background-image: url(../Images/landing-pg.jpg);
+}
+.pos{
+  width:350px;
+  margin-left:56rem;
+  padding-top: 7.6rem;
+}
+.head-txt{
+  border: 2px solid transparent;
+  position: absolute;
+   top:5rem;
+   left: 18rem;
+   width:700px;
+   height:60px;
+   font-family: 'Edo', arial;
+   font-size: 2.6rem;
+   font-weight: 100;
+   color: azure;
+}
+.low-txt{
+  border: 2px solid transparent;
+  position: absolute;
+  top:12.8rem;
+  left: 6rem;
+  width:900px;
+  height:280px;
+  color: azure;
+
+}
+.low-txt h1{
+  font-family: 'Rubik', sans-serif;
+   font-size: 1.8rem;
+   color: azure;
+
+}
+.low-txt h2{
+  font-size: 25px;
+  font-family: 'Expletus Sans', cursive;
+  margin-left: 16rem;
+  color: azure;
+
+}
+.low-txt h3{
+  margin-left: 18rem;
+  font-size: 25px;
+  font-family: 'Expletus Sans', cursive;
+  color: azure;
+
+}
+.low-txt  h4{
+  margin-left: 300px;
+  font-size: 25px;
+  font-family: 'Expletus Sans', cursive;
+  color: azure;
+
+}
+
+
+.landing3-pg {
+  width: 100%;
+  height: 62%;
+  background-image: url(../Images/asq.jpg);
+}
+.Ds-img{
+  width:344px;
+  margin-left: 4.4rem;
+}
+.DS-txt{
+  border: 2px solid transparent;
+  position: absolute;
+   top:42rem;
+   left: 38rem;
+   width:500px;
+   height:60px;
+   font-family: 'Varela Round', sans-serif;
+   font-size: 2.8rem;
+   font-weight: 600;
+   color: azure;
+}
+.DS-low-txt{
+  border: 2px solid transparent;
+  position: absolute;
+   top:48rem;
+   left: 47rem;
+   width:500px;
+   height:60px;
+   font-family: 'Expletus Sans', cursive;
+   font-size: 2rem;
+   color: azure;
+}
+.help{
+position: relative;
+text-align: center;
+cursor: pointer;
+font-size: 1.2rem;
+font-family: 'Expletus Sans', cursive;
+left:54rem;
+top:14.5rem;
+display: flex;
+padding: 0 30px;
+border-radius: 7px;
+border-color: rgb(84, 209, 25);
+line-height: 30px;
+background-image: linear-gradient(to right, #27b2ca, #f01111, #009245, #06f82e);
+        box-shadow: 0 4px 15px 0 rgba(114, 240, 79, 0.75);
+        background-size: 500%; 
+        box-shadow: 0 0.5rem 1rem rgba(241, 3, 3, 0.15);
+	    color: #fff;
+        -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+        -webkit-tap-highlight-color: transparent;
+	   -webkit-user-select: none;
+	    -moz-user-select: none;
+	   -ms-user-select: none;
+	    user-select: none;
+}
+
+.help:hover{
+  animation-name: gradient;
+  -webkit-animation-name: gradient;
+  animation-duration: 2s;
+  -webkit-animation-duration: s;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+      
+}
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+
+  100% {
+      background-position: 100%;
+  }
+}
+
