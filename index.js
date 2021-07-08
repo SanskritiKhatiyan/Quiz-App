@@ -23,8 +23,16 @@ app.set('views', 'views');
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded( { extended: true} ));
+app.use(session({ secret: 'notagoodsecret'}));
 // app.use(express.static(path.join(__dirname, '/public')));
 
+// ====================USING MIDDLEWARE==========================
+const requirelogin=(req, res, next)=>{
+    if(!req.session.user_id){
+    return res.redirect('/')
+    }
+    next();
+}
 
 
 // =====================ROUTES===================================
@@ -45,6 +53,7 @@ app.post('/register', async (req, res)=>{
         password: hash_pw
       })
    await user.save();
+   req.session.user_id=user._id;
     res.redirect('/')
 
 })
@@ -55,16 +64,25 @@ app.get('/login', (req,res)=>{
 app.post('/login', async (req, res)=>{
     const {username, password} =req.body;
     const user= await User.findOne({username});
+    res.send(user.username);
     const validpassword = await bcrypt.compare(password, user.password);
     if(validpassword){
-    res.redirect('/')
+    req.session.user_id=user._id;
+    // res.redirect('/')
     }
     else{
     res.send('AREY YAAR')
     }
 })
 
+app.post('/logout', (req, res)=>{
+    req.session.destroy();
+    res.redirect('/login')
+})
 
+app.get('/secret', requirelogin,(req,res)=>{
+    res.render('logout')
+})
 
 
 // =======================Listening App===========================
