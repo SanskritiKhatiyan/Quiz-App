@@ -4,6 +4,7 @@ const app= express();
 const User= require("./models/user");
 const mongoose= require("mongoose");
 const bcrypt= require("bcrypt");
+const session= require('express-session');
 
 
 // ===================CONNECTING DATABASE========================
@@ -28,12 +29,7 @@ app.use(express.urlencoded( { extended: true} ));
 
 // =====================ROUTES===================================
 
-app.get('/', (req,res)=>{
-    res.send('This is home page');
-})
-
-
-app.get('/landing', (req, res)=>{
+app.get('/', (req, res)=>{
     res.render('landing');
 })
 
@@ -55,6 +51,17 @@ app.post('/register', async (req, res)=>{
 
 app.get('/login', (req,res)=>{
     res.render('login');
+})
+app.post('/login', async (req, res)=>{
+    const {username, password} =req.body;
+    const user= await User.findOne({username});
+    const validpassword = await bcrypt.compare(password, user.password);
+    if(validpassword){
+    res.redirect('/')
+    }
+    else{
+    res.send('AREY YAAR')
+    }
 })
 
 
