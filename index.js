@@ -1,14 +1,17 @@
+require("dotenv").config();
+
+
 // =======================REQUIRED===============================
 const express= require("express");
 const app= express();
 const User= require("./models/user");
 const mongoose= require("mongoose");
+const bodyparser = require("body-parser");
 const bcrypt= require("bcrypt");
 const session= require('express-session');
 
-
 // ===================CONNECTING DATABASE========================
-mongoose.connect('mongodb+srv://quiz:gbuquiz@quiz.ldhgg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(()=>{
     console.log("mongo connection is done:)");
 })
@@ -17,10 +20,9 @@ mongoose.connect('mongodb+srv://quiz:gbuquiz@quiz.ldhgg.mongodb.net/myFirstDatab
     console.log(err);
 })
 
-
+app.use(bodyparser.urlencoded({extended : true}));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
-
 app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded( { extended: true} ));
 app.use(session({ secret: 'notagoodsecret'}));
@@ -88,6 +90,6 @@ app.get('/secret', requirelogin,(req,res)=>{
 
 
 // =======================Listening App===========================
-app.listen(2000,()=>{
+app.listen(process.env.PORT || 2000,function(){
     console.log("listening on port 2000!!")
 })
