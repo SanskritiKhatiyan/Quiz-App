@@ -40,7 +40,7 @@ const requirelogin=(req, res, next)=>{
 // =====================ROUTES===================================
 
 app.get('/', (req, res)=>{
-    res.render('landing');
+    res.render('index');
 })
 
 app.get('/register', (req,res)=>{
