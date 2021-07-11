@@ -39,9 +39,9 @@ const requirelogin=(req, res, next)=>{
 
 // =====================ROUTES===================================
 
-app.get('/', (req, res)=>{
+app.get('/',function(req, res){
     res.render('landing');
-})
+});   
 
 app.get('/register', (req,res)=>{
     res.render('register');
