@@ -39,13 +39,13 @@ const requirelogin=(req, res, next)=>{
 
 // =====================ROUTES===================================
 
-app.get('/',function(req, res){
+app.get("/",function(req, res){
     res.render('landing');
 });   
 
-app.get('/register', (req,res)=>{
+app.get('/register',function(req,res){
     res.render('register');
-})
+});
 
 app.post('/register', async (req, res)=>{
     const {password,username}= req.body;
