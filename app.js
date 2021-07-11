@@ -1,17 +1,16 @@
-require("dotenv").config();
-
 
 // =======================REQUIRED===============================
 const express= require("express");
 const app= express();
 const User= require("./models/user");
 const mongoose= require("mongoose");
-const bodyparser = require("body-parser");
 const bcrypt= require("bcrypt");
 const session= require('express-session');
+const nodemailer= require('nodemailer');
+const { getMaxListeners } = require("./models/user");
 
 // ===================CONNECTING DATABASE========================
-mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost:27017/userdb', { useNewUrlParser: true, useUnifiedTopology: true })
 .then(()=>{
     console.log("mongo connection is done:)");
 })
@@ -20,13 +19,35 @@ mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true, useUnifiedTop
     console.log(err);
 })
 
-app.use(bodyparser.urlencoded({extended : true}));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded( { extended: true} ));
 app.use(session({ secret: 'notagoodsecret'}));
 // app.use(express.static(path.join(__dirname, '/public')));
+
+// ====================NODEMAILER===============================
+const transporter= nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+        user: "gbucseproject@gmail.com",
+        pass: "gbucse@121"
+    }
+});
+
+const options ={
+    from: "gbucseproject@gmail.com" ,
+    to: "cseproject2023@gmail.com",
+    subject: "checking the contact us backend!!!",
+    text: "hi! i m working totally fine."
+};
+
+transporter.sendMail(options, function(err, info){
+    if(err)
+    console.log("ERROR!!",err);
+    else
+    console.log("Sent: "+ info.response);
+})
 
 // ====================USING MIDDLEWARE==========================
 const requirelogin=(req, res, next)=>{
@@ -90,6 +111,6 @@ app.get('/secret', requirelogin,(req,res)=>{
 
 
 // =======================Listening App===========================
-app.listen(process.env.PORT || 2000,function(){
+app.listen(2000,()=>{
     console.log("listening on port 2000!!")
 })
