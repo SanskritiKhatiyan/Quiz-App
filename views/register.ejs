@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,22 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="https://demo.plantpot.works/assets/css/normalize.css">
+    <link rel="stylesheet" href="https://use.typekit.net/opg3wle.css">
+    <link rel="stylesheet" type="text/css" href="../Stylesheets/login.css">
 </head>
 <body>
-    <h1> SIGN UP!!!!</h1>
-    <form action="/register" method="POST"> 
-        <div>
-            <label for="username"> Username:</label>
-            <input type="text" name="username" id="username" placeholder="Harry"> 
-        </div>
-        <div>
-            <label for="password"> Password:</label>
-            <input type="text" name="password" id="password" placeholder="password"> 
-        </div>
-        <div>
-            <button>Sign up</button>
-        </div>
+    <div id="container">
+        <div class="box">
+          <div class="form-box">
+            <div class="ic-account"></div>
+    <form id="login-form" name="login-form" action="/register" method="POST"> 
+            <label for="username"></label>
+            <input id="email" class="login-form-input" type="text" name="username" placeholder="Username" required> 
+            <label for="password"></label>
+            <input id="password" class="login-form-input" type="text" name="password" placeholder="Password" required> 
+            <button class="login-form-btn" >SIGN UP <button>
+        <p class="text"> <a href="/login">Login</a>
     </form>
-
+   </div>
+   <div class="circle-01"></div>
+   <div class="circle-02"></div>
+   </div>
+   </div>
 </body>
 </html>

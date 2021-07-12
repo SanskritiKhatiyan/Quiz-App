@@ -29,7 +29,9 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 // ====================NODEMAILER===============================
 
-
+aap.post('/contact',function(req,res){
+    
+})
 // const transporter= nodemailer.createTransport({
 //     service: "gmail",
 //     auth: {
