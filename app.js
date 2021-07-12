@@ -54,7 +54,6 @@ app.post('/contact',function(req,res){
         else
         console.log("Sent: "+ info.response);
     })
-    res.redirect("/");
 });
 
 // ====================USING MIDDLEWARE==========================
