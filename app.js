@@ -29,30 +29,33 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 // ====================NODEMAILER===============================
 
-aap.post('/contact',function(req,res){
+app.post('/contact',function(req,res){
+    const message= req.body.message;
+    const name= req.body.name;
+    const email= req.body.email;
+    const transporter= nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+            user: "gbucseproject@gmail.com",
+            pass: "gbucse@121"
+        }
+    });
     
-})
-// const transporter= nodemailer.createTransport({
-//     service: "gmail",
-//     auth: {
-//         user: "gbucseproject@gmail.com",
-//         pass: "gbucse@121"
-//     }
-// });
-
-// const options ={
-//     from: "gbucseproject@gmail.com" ,
-//     to: "cseproject2023@gmail.com",
-//     subject: "checking the contact us backend!!!",
-//     text: "hi! i m working totally fine."
-// };
-
-// transporter.sendMail(options, function(err, info){
-//     if(err)
-//     console.log("ERROR!!",err);
-//     else
-//     console.log("Sent: "+ info.response);
-// })
+    const options ={
+        from: "gbucseproject@gmail.com" ,
+        to: "cseproject2023@gmail.com",
+        subject: name+" filled contact us form with email "+ email,
+        text: message
+    };
+    
+    transporter.sendMail(options, function(err, info){
+        if(err)
+        console.log("ERROR!!",err);
+        else
+        console.log("Sent: "+ info.response);
+    })
+    res.redirect("/");
+});
 
 // ====================USING MIDDLEWARE==========================
 const requirelogin=(req, res, next)=>{
