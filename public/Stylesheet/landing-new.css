@@ -174,17 +174,19 @@ transition: background-color 0.5s
 
 .landing3-pg {
   width: 100%;
-  height: 62%;
+  height: 55%;
+  top:-50%;
   background-image: url(../Images/asq.jpg);
 }
 .Ds-img{
-  width:344px;
+  width:324px;
   margin-left: 4.4rem;
+  bottom: 10%;
 }
 .DS-txt{
   border: 2px solid transparent;
   position: absolute;
-   top:42rem;
+   top:2rem;
    left: 38rem;
    width:500px;
    height:60px;
@@ -196,7 +198,7 @@ transition: background-color 0.5s
 .DS-low-txt{
   border: 2px solid transparent;
   position: absolute;
-   top:48rem;
+   top:8rem;
    left: 47rem;
    width:500px;
    height:60px;
@@ -211,7 +213,7 @@ cursor: pointer;
 font-size: 1.2rem;
 font-family: 'Expletus Sans', cursive;
 left:54rem;
-top:14.5rem;
+top:13rem;
 display: flex;
 padding: 0 30px;
 border-radius: 7px;
@@ -242,6 +244,196 @@ background-image: linear-gradient(to right, #27b2ca, #f01111, #009245, #06f82e);
   -webkit-animation-fill-mode: forwards;
       
 }
+
+.page2{
+  display: block;
+  bottom: 8rem;
+  height: 100%;
+  clear: both;
+  }
+
+.card1 {
+  border-radius: 16px;
+  margin: 0 auto;
+  width: 310px;
+  top:150;
+  right:475;
+  max-width: 100%;
+  min-height: 250px;
+  box-shadow: 0px 3px 5px -1px rgba(49, 128, 4, 0.2), 0px 5px 8px 0px rgba(3, 245, 96, 0.14), 0px 1px 14px 0px rgba(3, 63, 11, 0.12);
+  overflow: hidden;
+  background-image: url(https://mongooseagency.com/files/3415/9620/1413/Return_of_Sports.jpg);
+  background-size: cover;
+}
+.info {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-color:transparent;
+  top:75;
+  transform: translateY(100%) translateY(-130px) translateZ(0);
+  transition: transform 0.5s ease-out;
+}
+
+.card1:hover .info, .card1:hover {
+  transform: translateY(0) translateZ(0);
+}
+.title {
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1;
+  color: white;
+  border: 1px solid lightcyan;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+h1 {
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  line-height: 4.2;
+  color: #1c5b72;
+  font-size: 5.618em;
+}
+
+@media (min-width: 800px) {
+  h1 {
+    font-size: 4.236em;
+    font-weight: 300;
+  }
+}
+
+@media (min-width: 800px) {
+  p {
+    font-size: 1.3em;
+  }
+}
+
+.card2 {
+    border-radius: 16px;
+    margin: 0 auto;
+    width: 310px;
+    bottom: 100;
+    right:160;
+    max-width: 100%;
+    min-height: 250px;
+    box-shadow: 0px 3px 5px -1px rgba(202, 14, 14, 0.2), 0px 5px 8px 0px rgba(243, 1, 1, 0.14), 0px 1px 14px 0px rgba(250, 5, 5, 0.12);
+    overflow: hidden;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwlPahjOevWaaIw2AsdC-4oqB5-C-FBYnQ6vqTtHC0KrKaNYcmK3msWVeZEcOb9wFRSioaGKWxON4&usqp=CAU);
+    background-size: cover;
+  }
+  
+  
+  .card2:hover .info, .card2:hover .info:before {
+    transform: translateY(0) translateZ(0);
+  }
+  
+  
+  * {
+    box-sizing: border-box;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+ 
+  .card3 {
+    border-radius: 16px;
+    margin: 0 auto;
+    width: 310px;
+    bottom: 350;
+    left:155;
+    max-width: 100%;
+    min-height: 250px;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    background-image: url(https://c1.wallpaperflare.com/preview/46/1015/698/knowledge-books-board-stack-education-learn.jpg);
+    background-size: cover;
+  }
+  
+  
+  .card3:hover .info, .card3:hover .info:before {
+    transform: translateY(0) translateZ(0);
+  }
+  
+
+  * {
+    box-sizing: border-box;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .card4 {
+    border-radius: 16px;
+    margin: 0 auto;
+    width: 310px;
+    bottom: 600;
+    left:475;
+    max-width: 100%;
+    min-height: 250px;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    background-image: url(https://wallpaperaccess.com/full/133811.jpg);
+    background-size: cover;
+  }
+ 
+  
+  .card4:hover .info, .card4:hover .info:before {
+    transform: translateY(0) translateZ(0);
+  }
+
+  * {
+    box-sizing: border-box;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  .play{
+    left: 35%;
+    margin-top: 14vh;
+    position: relative;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Expletus Sans', cursive; 
+    display: flex;
+    padding: 0 15px;
+    border-radius: 7px;
+    border-color: rgb(233, 221, 181);
+    line-height: 30px;
+    background-image: linear-gradient(to right, #1c1e1f, #f30303, #58b302, #e8f806);
+            box-shadow: 0 4px 15px 0 rgba(62, 168, 33, 0.75);
+            background-size: 500%; 
+            box-shadow: 0 0.5rem 1rem rgba(241, 3, 3, 0.15);
+          color: #fff;
+            -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+            -webkit-tap-highlight-color: transparent;
+         -webkit-user-select: none;
+          -moz-user-select: none;
+         -ms-user-select: none;
+          user-select: none;
+    }
+    
+    .play:hover{
+      animation-name: gradient;
+      -webkit-animation-name: gradient;
+      animation-duration: 2s;
+      -webkit-animation-duration: s;
+      animation-iteration-count: 1;
+      -webkit-animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+          
+    }  
+
+
+
 @keyframes gradient {
   0% {
       background-position: 0% 50%;
