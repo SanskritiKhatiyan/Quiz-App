@@ -1,0 +1,59 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+  <title>Contact us </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+</head>
+
+<body translate="no" >
+
+<div class="wrapper centered">
+  <article class="letter">
+    <div class="side">
+      <h1>Contact us</h1>
+      <p>
+        <textarea placeholder="Your message"></textarea>
+      </p>
+    </div>
+    <div class="side">
+      <div class="abwe">
+      <p>
+        <input type="text" placeholder="Your name" >
+      </p>
+      <p>
+        <input type="email" placeholder="Your email" >
+      </p>
+    </div>
+      <p>
+        <button id="sendLetter">Send</button>
+      </p>
+    </div>
+  </article>
+  <div class="envelope front"></div>
+  <div class="envelope back"></div>
+</div>
+<p class="result-message centered">Thank you for your message</p>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js"></script>
+
+  
+      <script id="rendered-js" >
+function addClass() {
+  document.body.classList.add("sent");
+}
+
+sendLetter.addEventListener("click", addClass);
+//# sourceURL=pen.js
+    </script>
+
+  
+<script src="style.js"></script>
+</body>
+
+</html>
+ 
