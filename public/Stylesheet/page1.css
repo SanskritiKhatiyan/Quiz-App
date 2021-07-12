@@ -116,7 +116,7 @@ transition: background-color 0.5s
 .First-pg {
   width: 100%;
   height: 85%;
-  background-image: url(/public/Images/code.jpg);
+  background-image: url(../Images/code.jpg);
 }
 .pos{
   width:370px;
@@ -234,7 +234,7 @@ span:nth-child(18) {
 .bottom-pg {
   width: 100%;
   height: 23%;
-  background-image: url(./lines.jpg);
+  background-image: url(../Images/lines.jpg);
 }
 
 
