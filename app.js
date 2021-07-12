@@ -8,6 +8,7 @@ const bcrypt= require("bcrypt");
 const session= require('express-session');
 const nodemailer= require('nodemailer');
 const { getMaxListeners } = require("./models/user");
+const path = require('path');
 
 // ===================CONNECTING DATABASE========================
 mongoose.connect('mongodb://localhost:27017/userdb', { useNewUrlParser: true, useUnifiedTopology: true })
@@ -24,9 +25,11 @@ app.set('views', 'views');
 app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded( { extended: true} ));
 app.use(session({ secret: 'notagoodsecret'}));
-// app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 // ====================NODEMAILER===============================
+
+
 // const transporter= nodemailer.createTransport({
 //     service: "gmail",
 //     auth: {
@@ -58,12 +61,47 @@ const requirelogin=(req, res, next)=>{
 }
 
 
-// =====================ROUTES===================================
-
-app.get("/",function(req, res){
+// !!!!!!!!!!!!!!!!!!!!!!!ROUTES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+app.get('/',function(req, res){
     res.render("landing");
 });   
 
+// ===================CONTACT-US=================================
+app.get('/contact', function(req, res){
+    res.render('contact');
+});
+
+// ===================QUIZ PAGES=================================
+app.get('/sports', function(req, res){
+    res.render('sports');
+});
+app.get("/dsa", function(req, res){
+    res.render("dsa");
+});
+app.get('/gk', function(req, res){
+    res.render('gk');
+});
+app.get('/cultures', function(req, res){
+    res.render('cultures');
+});
+
+// ===================LEVEL-1=================================
+app.get('/api1', function(req, res){
+    res.render('api1');
+});
+app.get('/api2', function(req, res){
+    res.render('api2');
+});
+app.get('/flag1', function(req, res){
+    res.render('flag1');
+});
+app.get('/manual1', function(req, res){
+    res.render('manual1');
+});
+
+
+// ===================REGISTER=================================
 app.get('/register',function(req,res){
     res.render('register');
 });
@@ -81,6 +119,7 @@ app.post('/register', async (req, res)=>{
 
 })
 
+// ===================LOGIN=================================
 app.get('/login', (req,res)=>{
     res.render('login');
 })
@@ -100,6 +139,7 @@ app.post('/login', async (req, res)=>{
     }
 })
 
+// ===================LOGOUT=================================
 app.post('/logout', (req, res)=>{
     req.session.destroy();
     res.redirect('/login')

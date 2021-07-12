@@ -116,7 +116,7 @@ transition: background-color 0.5s
 .First-pg {
   width: 100%;
   height: 85%;
-  background-image: url(./code.jpg);
+  background-image: url(/public/Images/code.jpg);
 }
 .pos{
   width:370px;
