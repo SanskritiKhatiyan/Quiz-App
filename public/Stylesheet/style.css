@@ -168,7 +168,7 @@ button:hover{
 
 .quiz_box{
     
-    margin-top: -75vh;
+    margin-top: -80vh;
     margin-left: 50vw;
     width: 50rem; 
     height:29rem ; 
@@ -204,6 +204,11 @@ button:hover{
     .option_list{
         margin-left: -17vw;
         margin-top: -5vh;
+    }
+    .que_border{
+        width:10rem;
+        height: 60px;
+        border:2px solid red;
     }
    
 }
@@ -532,6 +537,9 @@ transform: translate(-50%, -50%) scale(1);
         }
         .result_box .score_text span{
            margin-left: -40%;
+        }
+        .result_box .score_text .score_n{
+            margin-left: 18vw;
         }
         .result_box .resultbuttons{
             margin-left: -40px;

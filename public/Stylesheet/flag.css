@@ -1,9 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:500");
 
 .abc{
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+    background: linear-gradient(270deg, #459f88, #e17e23, #0ae7e0);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+html,body{
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 .bg{
     background: url('../Images/india1.png');
@@ -14,9 +22,8 @@
 .info_box
 {
    
-    position: absolute;
-    top: 50%;
-    left: 50%;
+   margin-top: 50vh;
+    margin-left: 50vw;
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
                 0 6px 20px 0 rgba(133, 131, 131, 0.19);
@@ -26,10 +33,30 @@
 	box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
 	border: 1px solid rgba(255, 255, 255, 0.5);
 	border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 	/* backdrop-filter: blur(2px); */
 	border-radius: 10px;
   }
+
+  @media only screen and (max-width: 600px) {
+    .info_box { 
+       
+        margin-left: 180px;
+        margin-top: 400px;
+        width: 19rem;
+        height: 45rem;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        /* backdrop-filter: blur(2px); */
+        border-radius: 10px;
+    }
+    
+}
 
   .info_box.activeInfo{
     opacity: 0;
@@ -118,14 +145,28 @@ button:hover{
 		background-position: 0% 50%;
 	}
 }
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
 
 
 /* Quiz Box */
 
 .quiz_box{
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    margin-top: -80vh;
+    margin-left: 50vw;
     width: 50rem; 
     height:29rem ; 
     transform: translate(-50%, -50%);
@@ -142,6 +183,50 @@ button:hover{
 	border-radius: 10px;
 }
 
+
+@media only screen and (max-width: 600px) {
+    .quiz_box{
+        margin-top: -90vh;
+        margin-left: 50vw;
+        width: 19rem; 
+        height:45rem ; 
+        transform: translate(-50%, -50%);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                    0 6px 20px 0 rgba(0, 0, 0, 0.9);
+         opacity: 0;
+         pointer-events: none;
+        }
+        .que_text span{
+            margin-left: -5vw;
+            margin-top: 10vh;
+        }
+        .option_list{
+            margin-left: -17vw;
+            margin-top: -5vh;
+        }
+        .que_border{
+            width:10rem;
+            height: 60px;
+            border:2px solid red;
+        }
+       
+    footer button{
+    margin-top: 0vh;
+    }
+    .abwe{
+        margin-top: 15vh;
+        
+    }
+    #ap{
+        position: relative;
+        left: -25%;
+        max-width: 70%;
+        margin-top: 10vh;
+       
+        
+    }
+    
+}
 
 
 .quiz_box.activeQuiz{
@@ -426,7 +511,7 @@ transform: translate(-50%, -50%) scale(1);
     
     }
     .result_box{
-        background: url('../Images/ima.JPG');
+        background: url('../Images/pass.png');
         /* left: 10%; */
         border-radius:10px;
         display: flex;
@@ -440,9 +525,51 @@ transform: translate(-50%, -50%) scale(1);
         pointer-events: none;
         transition: all 0.5s ease;
         background-repeat: no-repeat;
-        position: fixed;
+        position: absolute;
+        top:0% ;    
     }
     
+
+    @media only screen and (max-width: 600px) {
+        .result_box{
+            background: url('../Images/test.png');
+        /* left: 10%; */
+        border-radius:10px;
+        display: flex;
+        width: 19rem;
+        height: 40rem;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.5s ease;
+        background-repeat: no-repeat;
+        position: absolute;
+        top:30% ;
+        }
+        .result_box .complete_text{
+            margin-top: 10vh;
+            margin-left: 7vw;
+        }
+        .result_box .score_text span{
+           margin-left: -40%;
+        }
+        .result_box .resultbuttons{
+            margin-left: -40px;
+            margin-right: 10px;
+           
+        }
+        .result_box .score_text .score_n{
+            margin-left: 18vw;
+        }
+        .result_box .resultbuttons button{
+            margin-top: 50px;
+        }
+    }
+
+
     .result_box .icon{
         font-size: 100px;
         margin-bottom: 8px;
@@ -450,33 +577,42 @@ transform: translate(-50%, -50%) scale(1);
     
     .result_box .complete_text{
         font-family: 'Raleway', sans-serif;
-        font-size: 34px;
+        font-size: 24px;
         text-align:center;
-        padding-top: 20px;
+        padding-top: 38px;
+        margin-right:30px;
     }
     
     .result_box .score_text span{
         display: flex;
-        margin-top: 70px;
-        margin-left: 38px;
-        font-size: 30px;
-        font-weight: 700;
-        font-family: 'Rubik', sans-serif;
+        margin-top: 190px;
+        margin-left: 14vw;
+        font-size: 22px;
+        /* font-weight: 200; */
+        font-family: 'Raleway', sans-serif;
     }
+    .result_box .score_text .score-abc{
+        font-family: 'Raleway', sans-serif;
+        margin-top: 8vh;
+        margin-left: 15vw;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
 
     .result_box .score_n {
         display: flex;
         text-align: center;
-        padding: 90px 0px 0px 0px;
-        margin-left: 40px;
-        font-size: 35px;
+        padding: 45px 0px 0px 0px;
+        margin-left: 190px;
+        font-size: 28px;
         font-family:'Roboto Slab', serif;
     
     }
    
     .result_box .resultbuttons{
         display: flex;
-        margin-top: 100px;
+        margin-top: 20px;
     }
     
     .result_box .resultbuttons button{
